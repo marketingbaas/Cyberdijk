@@ -1,0 +1,239 @@
+<!doctype html><html lang="nl-BE"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>GDPR en DPO voor kmo&#x27;s: wat is verplicht? | Cyberdijk</title><meta name="description" content="Wanneer is een DPO verplicht, wat moet in je register staan en hoe snel meld je een datalek? De GDPR-basis voor Belgische kmo&#x27;s."><meta name="robots" content="index, follow, max-image-preview:large"><link rel="canonical" href="https://cyberdijk.eu/be/gdpr-dpo/"><link rel="alternate" hreflang="nl-BE" href="https://cyberdijk.eu/be/gdpr-dpo/"><link rel="alternate" hreflang="nl-NL" href="https://cyberdijk.eu/nl/avg-fg/"><link rel="alternate" hreflang="x-default" href="https://cyberdijk.eu/"><meta property="og:type" content="article"><meta property="og:title" content="GDPR en DPO voor kmo&#x27;s: wat is verplicht? | Cyberdijk"><meta property="og:description" content="Wanneer is een DPO verplicht, wat moet in je register staan en hoe snel meld je een datalek? De GDPR-basis voor Belgische kmo&#x27;s."><meta property="og:url" content="https://cyberdijk.eu/be/gdpr-dpo/"><meta property="og:locale" content="nl_BE"><meta property="og:site_name" content="Cyberdijk"><meta property="og:image" content="https://cyberdijk.eu/assets/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Cyberdijk: informatiebeveiliging en privacy, helder uitgelegd"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#12343B"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="alternate" type="application/rss+xml" title="Cyberdijk kennisbank" href="/feed.xml"><link rel="preload" href="/assets/fonts/archivo-head.woff2" as="font" type="font/woff2" crossorigin><style>@font-face{font-family:"Archivo Head";src:url("/assets/fonts/archivo-head.woff2") format("woff2");font-weight:600 700;font-style:normal;font-display:swap}
+@font-face{font-family:"Archivo Head Fallback";src:local("Arial Bold"),local("Arial-BoldMT"),local("Helvetica Neue Bold"),local("Liberation Sans Bold");size-adjust:111.4%;ascent-override:78.8%;descent-override:18.8%;line-gap-override:0%}
+:root{--ink:#12343B;--muted:#4A6066;--paper:#FFFFFF;--mist:#EEF3F4;--mist-2:#E2EBEE;--line:#C9D6D9;--water:#1B6A85;--water-soft:#D6E9EF;--gras:#4E7F35;--peil:#F2B705;--on-peil:#12343B;--dijk:#12343B;--kaart:#FFFFFF;--schaduw:0 12px 32px rgba(18,52,59,.10);--voet:#101A22;--voet-tekst:#B9C6CF;--kop:"Archivo Head","Archivo Head Fallback",Arial,sans-serif;--tekst:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#E7F1F2;--muted:#A9BEC2;--paper:#0D2327;--mist:#143138;--mist-2:#183A42;--line:#2C4C53;--water:#7FC6DD;--water-soft:#173F4B;--gras:#8FC06F;--dijk:#C9D6D9;--kaart:#11303A;--schaduw:0 12px 32px rgba(0,0,0,.35)}}
+:root[data-theme="dark"]{--ink:#E7F1F2;--muted:#A9BEC2;--paper:#0D2327;--mist:#143138;--mist-2:#183A42;--line:#2C4C53;--water:#7FC6DD;--water-soft:#173F4B;--gras:#8FC06F;--dijk:#C9D6D9;--kaart:#11303A;--schaduw:0 12px 32px rgba(0,0,0,.35)}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:5rem}
+body{margin:0;font:1.0625rem/1.65 var(--tekst);color:var(--ink);background:var(--paper)}
+a{color:var(--water);text-underline-offset:.18em}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--peil);outline-offset:2px}
+img,svg{max-width:100%;height:auto}
+.wrap{max-width:72rem;margin-inline:auto;padding-inline:clamp(1rem,4vw,2.5rem)}
+.skip{position:absolute;left:-999rem}
+.skip:focus{left:1rem;top:1rem;background:var(--paper);padding:.5rem .75rem;z-index:50}
+h1,h2,h3{font-family:var(--kop);font-weight:700;line-height:1.12;text-wrap:balance;letter-spacing:-.01em;overflow-wrap:anywhere;hyphens:auto}
+h1{font-size:clamp(2rem,1.2rem + 3.4vw,3.3rem);margin:0 0 1rem}
+h2{font-size:clamp(1.45rem,1.2rem + .9vw,1.9rem);margin:2.4rem 0 .7rem}
+h3{font-size:1.15rem;margin:1.5rem 0 .4rem}
+p{margin:0 0 1rem}
+ul,ol{margin:0 0 1rem;padding-left:1.3rem}
+li{margin-bottom:.45rem}
+.lede{font-size:clamp(1.1rem,1rem + .4vw,1.3rem);line-height:1.55;color:var(--muted);max-width:40rem}
+.kolom{max-width:44rem}
+.kolom p,.kolom li{max-width:70ch}
+.klein{font-size:.92rem;color:var(--muted)}
+.label{color:var(--muted);font-size:.92rem}
+/* header */
+.top{position:sticky;top:0;z-index:30;background:var(--paper);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:.75rem 1.25rem;padding-block:.7rem;flex-wrap:wrap}
+.merk{display:flex;align-items:center;gap:.6rem;font:700 1.4rem/1 var(--kop);color:var(--ink);text-decoration:none;margin-right:auto;letter-spacing:-.01em}
+.merk b{font-weight:inherit}.merk b span{color:var(--water)}
+.merk svg{width:2.3rem;height:2.3rem;flex:none}
+.m-t{fill:var(--ink)}.m-d{fill:var(--peil)}.m-w{fill:none;stroke:#7FC6DD;stroke-width:3.5;stroke-linecap:round}.m-g{stroke:var(--gras);stroke-width:3.5;stroke-linecap:round}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .m-t{fill:#1B6A85}}
+:root[data-theme="dark"] .m-t{fill:#1B6A85}
+.menu-schakel{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+.menu-knop{display:inline-flex;align-items:center;gap:.45rem;font-weight:700;padding:.55rem .8rem;border:2px solid var(--line);border-radius:.5rem;cursor:pointer;background:var(--paper);color:var(--ink);order:3}
+.menu-knop span{display:block;width:1.1rem;height:2px;background:currentColor;box-shadow:0 -5px 0 currentColor,0 5px 0 currentColor}
+.menu-schakel:focus-visible+.menu-knop{outline:3px solid var(--peil);outline-offset:2px}
+.top nav{display:none;order:4;flex-basis:100%;padding-top:.5rem;border-top:1px solid var(--line);margin-top:.4rem}
+.menu-schakel:checked~nav{display:block}
+.top nav ul{display:flex;flex-direction:column;gap:.1rem;list-style:none;margin:0;padding:0}
+.top nav li{margin:0}
+.top nav a{display:block;color:var(--ink);text-decoration:none;font-weight:600;padding:.6rem .25rem;border-bottom:1px solid var(--line)}
+.top nav li:last-child a{border-bottom:0}
+.top nav a:hover,.top nav a[aria-current]{text-decoration:underline;text-decoration-thickness:3px;text-decoration-color:var(--peil);text-underline-offset:.25em}
+.top .knop{order:2;padding:.6rem .9rem;font-size:.95rem;white-space:nowrap}
+@media (min-width:56rem){.menu-knop{display:none}.top nav{display:block;order:1;flex-basis:auto;padding:0;border:0;margin:0 .5rem 0 auto}.top nav ul{flex-direction:row;gap:.2rem 1.2rem}.top nav a{padding:.3rem 0;border:0}.merk{margin-right:0}.top .knop{padding:.7rem 1.1rem;font-size:1rem}}
+/* knoppen */
+.knop{display:inline-flex;align-items:center;gap:.5rem;background:var(--peil);color:var(--on-peil);font:700 1rem/1.2 var(--tekst);padding:.85rem 1.3rem;border-radius:.5rem;text-decoration:none;border:2px solid var(--peil);cursor:pointer;transition:transform .15s,box-shadow .15s}
+.knop:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(242,183,5,.35)}
+.knop:focus-visible{outline-color:var(--ink)}
+.knop.licht{background:transparent;color:var(--ink);border-color:var(--ink)}
+.knop.licht:hover{box-shadow:0 6px 18px rgba(18,52,59,.15)}
+.band-knop .knop.licht{color:#fff;border-color:#fff}
+main{padding-block:0 4rem}
+/* hero */
+.hero{background:linear-gradient(180deg,var(--mist) 0,var(--paper) 100%);border-bottom:1px solid var(--line)}
+.hero .wrap{display:grid;gap:2rem;padding-block:2.5rem 2rem;align-items:center}
+.hero h1{margin-bottom:.9rem}
+.hero .acties{display:flex;flex-wrap:wrap;gap:.75rem 1rem;margin:1.4rem 0 1rem}
+.kicker{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;color:var(--water);margin-bottom:1rem}
+.kicker::before{content:"";width:1.6rem;height:4px;border-radius:2px;background:var(--peil)}
+.vinkjes{display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;list-style:none;padding:0;margin:0;font-size:.95rem;color:var(--muted)}
+.vinkjes li{display:flex;align-items:center;gap:.45rem;margin:0}
+.vinkjes svg{width:1.1rem;height:1.1rem;color:var(--gras);flex:none}
+.teller{display:inline-flex;align-items:center;gap:.6rem;background:var(--kaart);border:1px solid var(--line);border-radius:2rem;padding:.45rem 1rem .45rem .7rem;font-size:.92rem;color:var(--muted);margin:0 0 1.1rem}
+.teller span[data-dag]{color:var(--ink);font-weight:700}
+.stip{width:.6rem;height:.6rem;border-radius:50%;background:#B23A3A;flex:none;box-shadow:0 0 0 0 rgba(178,58,58,.5);animation:stip 2s ease-out infinite}
+@keyframes stip{to{box-shadow:0 0 0 .6rem rgba(178,58,58,0)}}
+.bronnenstrip{border-bottom:1px solid var(--line);background:var(--paper)}
+.bronnenstrip .wrap{display:flex;flex-wrap:wrap;gap:.4rem 1.6rem;align-items:center;padding-block:.8rem;font-size:.88rem;color:var(--muted)}
+.bronnenstrip strong{color:var(--ink);font-weight:700}
+.plak{display:none}
+@media (max-width:56rem){.plak{display:block;position:fixed;left:0;right:0;bottom:0;z-index:40;padding:.6rem 1rem calc(.6rem + env(safe-area-inset-bottom,0px));background:var(--paper);border-top:1px solid var(--line);box-shadow:0 -8px 24px rgba(0,0,0,.08)}.plak .knop{width:100%;justify-content:center}body{padding-bottom:4.6rem}}
+@media (min-width:52rem){.hero .wrap{grid-template-columns:1.1fr .9fr;padding-block:3.5rem 3rem}.hero h1{font-size:clamp(2rem,1rem + 2.6vw,2.9rem)}.hero .beeld{order:2}}
+.hero-land .wrap{display:block;padding-block:1rem 2.5rem}
+/* dijk-illustratie */
+.beeld{position:relative}
+.dijk{display:block;width:100%;height:auto;max-height:28rem}
+.d-w{fill:var(--water-soft)}.d-wl{fill:none;stroke:var(--water);stroke-width:4;stroke-linecap:round}.d-l{fill:var(--mist-2)}.d-d{fill:var(--dijk)}.d-g{stroke:var(--gras);stroke-width:10;stroke-linecap:round}.d-p{fill:var(--peil)}.d-b{fill:var(--paper);stroke:var(--ink);stroke-width:4}.d-r{fill:var(--peil)}
+.golf{animation:golf 9s linear infinite}
+.golf-2{animation:golf 14s linear infinite reverse;opacity:.55}
+@keyframes golf{to{transform:translateX(-600px)}}
+.peil-lamp{animation:peil 2.6s ease-in-out infinite}
+@keyframes peil{0%,100%{opacity:.35}50%{opacity:1}}
+.schild{animation:schild 6s ease-in-out infinite}
+@keyframes schild{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.t-v{fill:#fff;stroke:#B23A3A;stroke-width:2.5;stroke-linejoin:round}.t-l{fill:none;stroke:#B23A3A;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.t-dreiging{opacity:0;transform-box:fill-box;transform-origin:center;animation:dreiging linear infinite}
+@keyframes dreiging{0%{transform:translate(0,0) rotate(-8deg);opacity:0}8%{opacity:1}82%{transform:translate(calc(var(--dx)*.92),calc(var(--dy)*.92)) rotate(10deg);opacity:1}100%{transform:translate(var(--dx),var(--dy)) rotate(14deg) scale(.1);opacity:0}}
+.v-r{fill:var(--gras)}.v-l{fill:none;stroke:#fff;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.veilig{transform-box:fill-box;transform-origin:center;animation:veilig 4s ease-in-out infinite}
+@keyframes veilig{0%,100%{transform:scale(1)}50%{transform:scale(1.18)}}
+/* secties */
+.sectie{padding-block:3rem}
+.sectie-mist{background:var(--mist)}
+.sectie h2:first-child{margin-top:0}
+.sectie-kop{max-width:44rem;margin-bottom:1.6rem}
+.sectie-kop h2{margin:0 0 .5rem}
+.sectie-kop p{color:var(--muted);margin:0}
+.kaarten{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr))}
+.kaart{position:relative;background:var(--kaart);border:1px solid var(--line);border-radius:1rem;padding:1.4rem 1.5rem;box-shadow:var(--schaduw);display:flex;flex-direction:column;transition:transform .2s,border-color .2s}
+.kaart:hover{transform:translateY(-3px);border-color:var(--water)}
+.kaart h2,.kaart h3{margin:0 0 .5rem;font-size:1.2rem}
+.kaart p{margin:0 0 .75rem;color:var(--muted)}
+.kaart p:last-child{margin:0}
+.kaart .pijl{margin-top:auto;font-weight:700;text-decoration:none;color:var(--water)}
+.kaart .pijl::after{content:" →"}
+.kaart .pijl:hover{text-decoration:underline}
+.kaart-link{text-decoration:none;color:inherit}
+.kaart-link h3{color:var(--ink)}
+.kaart-link:hover h3{color:var(--water)}
+.kaart .vlag{display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--water);margin-bottom:.5rem}
+.kaart-land{border-width:2px;border-color:var(--ink)}
+.kaart-land ul{margin:.25rem 0 1.25rem;padding-left:1.1rem;color:var(--muted)}
+.kaart-land .knop{align-self:flex-start;margin-top:auto}
+.landen{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,18rem),1fr))}
+.kies{display:flex;flex-wrap:wrap;gap:.75rem 1rem;align-items:center}
+/* cijfers */
+.cijfers{background:var(--ink);color:#fff;padding-block:2.5rem}
+.cijfers .wrap{display:grid;gap:1.5rem 2rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,12rem),1fr))}
+.cijfer b{display:block;font:700 clamp(1.7rem,1.3rem + 1.4vw,2.4rem)/1.1 var(--kop);color:var(--peil);margin-bottom:.3rem;letter-spacing:-.01em}
+.cijfer span{display:block;color:#C9D6D9;font-size:.95rem;max-width:18rem}
+/* stappen */
+.stappen{list-style:none;padding:0;margin:0;display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,15rem),1fr));counter-reset:stap}
+.stappen li{counter-increment:stap;margin:0;padding:1.3rem 1.4rem 1.3rem 4.2rem;position:relative;background:var(--kaart);border:1px solid var(--line);border-radius:1rem}
+.stappen li::before{content:counter(stap);position:absolute;left:1.2rem;top:1.15rem;width:2.1rem;height:2.1rem;border-radius:50%;background:var(--peil);color:var(--on-peil);font:700 1.1rem/2.1rem var(--kop);text-align:center}
+.stappen h3{margin:0 0 .35rem;font-size:1.1rem}
+.stappen p{margin:0;color:var(--muted)}
+/* kruimels, lijsten, blokken */
+.kruimel{font-size:.92rem;color:var(--muted);margin:1.5rem 0 1.1rem}
+.kruimel ol{list-style:none;display:flex;flex-wrap:wrap;gap:.3rem .5rem;padding:0;margin:0}
+.kruimel li{margin:0}
+.kruimel li+li::before{content:"/";margin-right:.5rem;color:var(--line)}
+.kruimel a{color:var(--muted)}
+.kort{background:var(--mist);border-left:6px solid var(--peil);border-radius:0 .75rem .75rem 0;padding:1.1rem 1.35rem;margin:1.5rem 0}
+.kort h2{font-size:1.05rem;margin:0 0 .5rem}
+.kort ul{margin:0}
+.inhoud{margin:1.5rem 0 .5rem;font-size:.95rem}
+.inhoud strong{display:block;margin-bottom:.35rem}
+.inhoud ol{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:.4rem}
+.inhoud li{margin:0}
+.inhoud a{display:inline-block;background:var(--mist);border:1px solid var(--line);border-radius:2rem;padding:.25rem .8rem;text-decoration:none;color:var(--ink)}
+.inhoud a:hover{border-color:var(--water);color:var(--water)}
+.vragen{list-style:none;padding:0;margin:1.5rem 0 0}
+.vragen li{border-top:1px solid var(--line);padding:.95rem 0;margin:0}
+.vragen li:last-child{border-bottom:1px solid var(--line)}
+.vragen a{font-weight:700;font-size:1.1rem}
+.vragen span{display:block;color:var(--muted)}
+details{border-top:1px solid var(--line);padding:.85rem 0}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{font-weight:700;cursor:pointer;list-style:none;position:relative;padding-right:2rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:.25rem;top:0;font:700 1.3rem/1.3 var(--kop);color:var(--water)}
+details[open] summary::after{content:"–"}
+details p{margin:.6rem 0 0;max-width:70ch}
+.cta{background:var(--mist);border:2px solid var(--ink);border-radius:1rem;padding:1.5rem 1.6rem;margin-top:2.5rem}
+.cta h2{margin:0 0 .5rem;font-size:1.35rem}
+.cta p:last-child{margin:0;display:flex;flex-wrap:wrap;gap:.75rem 1.25rem;align-items:center}
+.band-knop{background:var(--ink);color:#fff;padding-block:3rem;text-align:center}
+.band-knop h2{margin:0 0 .6rem;color:#fff}
+.band-knop p{color:#C9D6D9;max-width:40rem;margin-inline:auto}
+.band-knop .kies{justify-content:center;margin-top:1.4rem}
+.bronnen{font-size:.95rem}
+.nota{font-size:.92rem;color:var(--muted);border-top:1px solid var(--line);margin-top:2.5rem;padding-top:1rem}
+.lees-ook{margin-top:2.5rem}
+.lees-ook ul{list-style:none;padding:0;margin:0;display:grid;gap:.6rem}
+.lees-ook li{margin:0}
+.lees-ook a{font-weight:600}
+.lees-ook span{display:block;color:var(--muted);font-size:.9rem}
+/* artikel met zijkolom */
+.lees{display:grid;gap:2.5rem;align-items:start}
+@media (min-width:62rem){.lees{grid-template-columns:minmax(0,44rem) 17rem;gap:4rem}.zij{position:sticky;top:5rem}}
+.zij .kaart{margin-bottom:1.25rem}
+.zij .kaart h2{font-size:1.05rem}
+.zij .kaart .knop{width:100%;justify-content:center;margin-top:.4rem}
+.zij ul{list-style:none;padding:0;margin:0}
+.zij li{margin:0 0 .6rem;padding-left:1rem;position:relative}
+.zij li::before{content:"→";position:absolute;left:0;color:var(--peil);font-weight:700}
+.zij li a{text-decoration:none;color:var(--ink);font-weight:600;overflow-wrap:anywhere;hyphens:auto}
+.zij li a:hover{color:var(--water);text-decoration:underline}
+/* begrippen */
+.begrippen{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,19rem),1fr));margin:1.5rem 0}
+.begrippen div{background:var(--kaart);border:1px solid var(--line);border-radius:.9rem;padding:1.1rem 1.25rem}
+.begrippen dt{font:700 1.05rem var(--kop);margin:0 0 .35rem}
+.begrippen dd{margin:0;color:var(--muted);font-size:.97rem}
+/* formulieren */
+form label,legend{display:block;font-weight:700;margin:1.1rem 0 .3rem;padding:0}
+fieldset{border:0;padding:0;margin:0}
+fieldset label{font-weight:400;margin:.4rem 0;display:flex;gap:.7rem;align-items:flex-start;padding:.7rem .9rem;border:1.5px solid var(--line);border-radius:.6rem;background:var(--kaart);cursor:pointer}
+fieldset label:hover{border-color:var(--water)}
+fieldset label:has(input:checked){border-color:var(--water);background:var(--mist)}
+fieldset input{margin-top:.35rem;accent-color:var(--water)}
+input:not([type=radio]),select,textarea{width:100%;padding:.7rem .75rem;border:2px solid var(--line);border-radius:.5rem;font:inherit;background:var(--kaart);color:var(--ink)}
+input:not([type=radio]):focus,select:focus,textarea:focus{border-color:var(--water);outline:none;box-shadow:0 0 0 3px var(--water-soft)}
+.verborgen{position:absolute;left:-999rem}
+form .knop{margin-top:1.2rem}
+.uitkomst{margin-top:1.75rem;border:2px solid var(--ink);border-radius:1rem;padding:1.25rem 1.4rem;background:var(--kaart)}
+.uitkomst h2{margin:0 0 .25rem;font-size:1.35rem}
+.schaal{display:grid;grid-template-columns:repeat(3,1fr);gap:.35rem;margin:.6rem 0 1rem}
+.schaal span{height:.6rem;background:var(--line);border-radius:.2rem}
+.schaal span.aan{background:var(--peil)}
+.contact-blok{display:grid;gap:2.5rem;align-items:start}
+@media (min-width:62rem){.contact-blok{grid-template-columns:minmax(0,40rem) 18rem}}
+/* footer in de stijl van marketingbaas.com */
+.voet{background:var(--voet);color:var(--voet-tekst);padding:3rem 0 2rem;font-size:.92rem}
+.voet .wrap{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,13rem),1fr))}
+.voet .merkblok{grid-column:1/-1}
+@media (min-width:62rem){.voet .wrap{grid-template-columns:1.3fr 1fr 1fr 1fr}.voet .merkblok{grid-column:auto}}
+.voet h2{color:#fff;font:700 .95rem/1.3 var(--tekst);margin:0 0 .6rem}
+.voet ul{list-style:none;padding:0;margin:0}
+.voet li{margin-bottom:.3rem}
+.voet a{color:#fff;text-decoration:none}
+.voet a:hover{text-decoration:underline}
+.voet p{margin:0 0 .75rem}
+.voet .merk{color:#fff;margin:0 0 .7rem}
+.voet .merk b span{color:var(--peil)}
+.voet .m-t{fill:#1B6A85}
+.voet .onder{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.14);margin-top:.5rem;padding-top:1.1rem;display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem 1.5rem}
+.voet .onder p{margin:0}
+.band{background:var(--peil);color:var(--on-peil);font-size:.92rem;padding:.4rem 1rem;text-align:center}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}</style><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://cyberdijk.eu/"}, {"@type": "ListItem", "position": 2, "name": "België", "item": "https://cyberdijk.eu/be/"}, {"@type": "ListItem", "position": 3, "name": "GDPR en DPO voor kmo's: wat is verplicht?", "item": "https://cyberdijk.eu/be/gdpr-dpo/"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "GDPR en DPO voor kmo's: wat is verplicht?", "description": "Wanneer is een DPO verplicht, wat moet in je register staan en hoe snel meld je een datalek? De GDPR-basis voor Belgische kmo's.", "inLanguage": "nl-BE", "datePublished": "2026-10-01", "dateModified": "2026-10-01", "wordCount": 201, "articleSection": "België", "keywords": "avg, gdpr, privacy, dpo, datalek, register", "image": "https://cyberdijk.eu/assets/og.png", "mainEntityOfPage": "https://cyberdijk.eu/be/gdpr-dpo/", "author": {"@id": "https://cyberdijk.eu/#organisatie", "@type": "Organization", "name": "Cyberdijk"}, "publisher": {"@id": "https://cyberdijk.eu/#organisatie", "@type": "Organization", "name": "Cyberdijk", "logo": {"@type": "ImageObject", "url": "https://cyberdijk.eu/assets/og.png"}}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Mag een medewerker de DPO zijn?", "acceptedAnswer": {"@type": "Answer", "text": "Ja, als die persoon voldoende kennis heeft en er geen belangenconflict is. Een zaakvoerder of IT-verantwoordelijke die zelf over de verwerkingen beslist, komt daarom niet in aanmerking."}}, {"@type": "Question", "name": "Hoe hoog zijn de boetes?", "acceptedAnswer": {"@type": "Answer", "text": "Tot 20 miljoen euro of 4% van de wereldwijde jaaromzet."}}, {"@type": "Question", "name": "Moet ik een register hebben met minder dan 250 werknemers?", "acceptedAnswer": {"@type": "Answer", "text": "In de praktijk wel. De uitzondering voor kleinere organisaties vervalt zodra de verwerking niet incidenteel is, en loon- en klantenadministratie zijn dat nooit."}}]}</script></head><body><a class="skip" href="#inhoud">Naar de inhoud</a><header class="top"><div class="wrap"><a class="merk" href="/"><svg viewBox="0 0 64 64" aria-hidden="true"><rect class="m-t" width="64" height="64" rx="14"/><path class="m-w" d="M7 47q5-5 10 0t10 0"/><path class="m-w" d="M11 38q4-4 8 0t8 0" opacity=".55"/><path class="m-d" d="M23 55 36 18h10l13 37z"/><path class="m-g" d="M36.5 19.5h9"/></svg><b>Cyber<span>dijk</span></b></a><a class="knop" href="/be/nis2-check/">Doe de NIS2-check</a><input class="menu-schakel" type="checkbox" id="menu" aria-label="Menu openen of sluiten"><label class="menu-knop" for="menu"><span></span>Menu</label><nav aria-label="Hoofdmenu"><ul><li><a href="/be/" aria-current="true">België</a></li><li><a href="/nl/">Nederland</a></li><li><a href="/kennisbank/">Kennisbank</a></li><li><a href="/diensten/">Diensten</a></li><li><a href="/over/">Over</a></li><li><a href="/contact/">Contact</a></li></ul></nav></div></header><main id="inhoud"><div class="wrap"><div class="lees"><article class="kolom"><nav class="kruimel" aria-label="Kruimelpad"><ol><li><a href="/">Home</a></li><li><a href="/be/">België</a></li><li aria-current="page">GDPR en DPO voor kmo&#x27;s: wat is verplicht?</li></ol></nav><h1>GDPR en DPO voor kmo&#x27;s: wat is verplicht?</h1><p class="lede">Elke onderneming die persoonsgegevens verwerkt, valt onder de GDPR. Een DPO is alleen in drie situaties verplicht, maar een register en een procedure voor datalekken heeft bijna elke kmo nodig.</p><div class="kort"><h2>In het kort</h2><ul><li>Een DPO is verplicht voor overheden, en voor bedrijven die op grote schaal personen volgen of gevoelige gegevens verwerken.</li><li>Een register van verwerkingsactiviteiten heeft in de praktijk elke kmo nodig.</li><li>Een datalek met risico meld je binnen 72 uur bij de Gegevensbeschermingsautoriteit.</li></ul></div><nav class="inhoud" aria-label="Op deze pagina"><strong>Op deze pagina</strong><ol><li><a href="#wanneer-is-een-dpo-verplicht">Wanneer is een DPO verplicht?</a></li><li><a href="#wat-elke-kmo-moet-hebben">Wat elke kmo moet hebben</a></li><li><a href="#een-datalek-melden">Een datalek melden</a></li><li><a href="#gdpr-en-nis2-samen">GDPR en NIS2 samen</a></li></ol></nav>
+<h2 id="wanneer-is-een-dpo-verplicht">Wanneer is een DPO verplicht?</h2>
+<p>Een functionaris voor gegevensbescherming, de DPO, is verplicht in drie gevallen: je bent een overheidsinstantie, je kernactiviteit bestaat uit het op grote schaal en stelselmatig volgen van personen, of je verwerkt op grote schaal gevoelige gegevens zoals gezondheidsgegevens. De meeste kmo's vallen daar niet onder. Een vast aanspreekpunt voor privacy blijft wel verstandig.</p>
+<h2 id="wat-elke-kmo-moet-hebben">Wat elke kmo moet hebben</h2>
+<ul>
+<li>Een register van verwerkingsactiviteiten: welke gegevens, waarvoor, hoe lang en met wie gedeeld.</li>
+<li>Een privacyverklaring die klopt met wat je doet.</li>
+<li>Verwerkersovereenkomsten met leveranciers die gegevens voor je verwerken, zoals je sociaal secretariaat of je cloudleverancier.</li>
+<li>Een DPIA, een risicoanalyse vooraf, bij verwerkingen met een hoog risico.</li>
+<li>Een procedure voor verzoeken van betrokkenen en voor datalekken.</li>
+</ul>
+<h2 id="een-datalek-melden">Een datalek melden</h2>
+<p>Een datalek met een risico voor de betrokkenen meld je binnen 72 uur bij de Gegevensbeschermingsautoriteit. Is het risico hoog, dan verwittig je ook de betrokkenen zelf. Hou elk incident bij in een intern register, ook wanneer je het niet moet melden.</p>
+<h2 id="gdpr-en-nis2-samen">GDPR en NIS2 samen</h2>
+<p>De twee wetten overlappen. NIS2 gaat over de beveiliging van je systemen, de GDPR over persoonsgegevens. Een goede risicoanalyse en een incidentprocedure dienen voor allebei. Lees ook <a href="/be/nis2-cyfun/">NIS2 en CyFun voor kmo's</a>.</p>
+<h2>Veelgestelde vragen</h2><details><summary>Mag een medewerker de DPO zijn?</summary><p>Ja, als die persoon voldoende kennis heeft en er geen belangenconflict is. Een zaakvoerder of IT-verantwoordelijke die zelf over de verwerkingen beslist, komt daarom niet in aanmerking.</p></details><details><summary>Hoe hoog zijn de boetes?</summary><p>Tot 20 miljoen euro of 4% van de wereldwijde jaaromzet.</p></details><details><summary>Moet ik een register hebben met minder dan 250 werknemers?</summary><p>In de praktijk wel. De uitzondering voor kleinere organisaties vervalt zodra de verwerking niet incidenteel is, en loon- en klantenadministratie zijn dat nooit.</p></details><div class="cta"><h2>Weet je niet of je bedrijf onder NIS2 valt?</h2><p>Drie vragen, meteen een antwoord, zonder e-mailadres.</p><p><a class="knop" href="/be/nis2-check/">Doe de NIS2-check</a> <a href="/contact/">Of stel je vraag</a></p></div><div class="lees-ook"><h2>Lees ook</h2><ul><li><a href="/kennisbank/verwerkingsregister/">Verwerkingsregister: wat moet erin en hoe zet je het op?</a><span>België en Nederland</span></li><li><a href="/kennisbank/datalek-melden-72-uur/">Datalek melden binnen 72 uur: het stappenplan</a><span>België en Nederland</span></li><li><a href="/kennisbank/verwerkersovereenkomst/">Verwerkersovereenkomst: wat moet erin en met wie heb je er een nodig?</a><span>België en Nederland</span></li><li><a href="/kennisbank/dpia-wanneer-verplicht/">DPIA: wanneer is een gegevensbeschermingseffectbeoordeling verplicht?</a><span>België en Nederland</span></li></ul></div><h2>Bronnen</h2><ul class="bronnen"><li><a href="https://www.gegevensbeschermingsautoriteit.be" rel="noopener">Gegevensbeschermingsautoriteit</a></li></ul><p class="nota">Laatst gecontroleerd op 1 oktober 2026. Deze pagina geeft uitleg, geen juridisch advies. Cyberdijk beantwoordt vragen; begeleiding start na afronding van de certificering.</p></article><aside class="zij"><div class="kaart"><h2>Waar staat je bedrijf?</h2><p>Drie vragen, meteen een antwoord. Gratis en zonder e-mailadres.</p><a class="knop" href="/be/nis2-check/">Doe de NIS2-check</a></div><div class="kaart"><h2>Lees ook</h2><ul><li><a href="/kennisbank/verwerkingsregister/">Verwerkingsregister: wat moet erin en hoe zet je het op?</a></li><li><a href="/kennisbank/datalek-melden-72-uur/">Datalek melden binnen 72 uur: het stappenplan</a></li><li><a href="/kennisbank/verwerkersovereenkomst/">Verwerkersovereenkomst: wat moet erin en met wie heb je er een nodig?</a></li><li><a href="/kennisbank/dpia-wanneer-verplicht/">DPIA: wanneer is een gegevensbeschermingseffectbeoordeling verplicht?</a></li></ul></div><div class="kaart"><h2>Een vraag?</h2><p>Je krijgt binnen twee werkdagen antwoord per e-mail.</p><a class="knop licht" href="/contact/">Stel je vraag</a></div></aside></div></div></main><footer class="voet"><div class="wrap"><div class="merkblok"><a class="merk" href="/"><svg viewBox="0 0 64 64" aria-hidden="true"><rect class="m-t" width="64" height="64" rx="14"/><path class="m-w" d="M7 47q5-5 10 0t10 0"/><path class="m-w" d="M11 38q4-4 8 0t8 0" opacity=".55"/><path class="m-d" d="M23 55 36 18h10l13 37z"/><path class="m-g" d="M36.5 19.5h9"/></svg><b>Cyber<span>dijk</span></b></a><p>Heldere uitleg over NIS2, CyFun, ISO 27001, GDPR/AVG en de AI Act voor kmo's en mkb tussen Antwerpen en Breda. Gratis check, geen cookies, bronnen bij elk artikel.</p><p>Cyberdijk is een handelsnaam van Manufakt<br>Ondernemingsnummer BE 0772.333.596<br><a href="mailto:info@cyberdijk.eu">info@cyberdijk.eu</a></p><p>Ook van Manufakt: <a href="https://www.marketingbaas.com/" rel="noopener">Marketingbaas</a>, websites voor zelfstandigen in Vlaanderen en Nederland.</p></div><div><h2>België</h2><ul><li><a href="/be/nis2-cyfun/">NIS2 en CyFun</a></li><li><a href="/be/iso-27001/">ISO 27001 voor kmo&#x27;s</a></li><li><a href="/be/gdpr-dpo/">GDPR en DPO</a></li><li><a href="/be/nis2-check/">NIS2-check België</a></li><li><a href="/kennisbank/nis2-registratie-ccb/">NIS2-registratie bij het CCB</a></li><li><a href="/kennisbank/cyfun-zelfevaluatie/">CyFun-zelfevaluatie</a></li><li><a href="/be/regio/antwerpen/">Regio Antwerpen</a></li><li><a href="/be/regio/noorderkempen/">Regio Noorderkempen</a></li></ul></div><div><h2>Nederland</h2><ul><li><a href="/nl/cyberbeveiligingswet-nis2/">Cyberbeveiligingswet</a></li><li><a href="/nl/iso-27001/">ISO 27001 voor mkb</a></li><li><a href="/nl/avg-fg/">AVG en FG</a></li><li><a href="/nl/nis2-check/">Cyberbeveiligingswet-check</a></li><li><a href="/nl/regio/roosendaal/">Roosendaal</a></li><li><a href="/nl/regio/bergen-op-zoom/">Bergen op Zoom</a></li><li><a href="/nl/regio/breda/">Breda</a></li><li><a href="/nl/regio/moerdijk/">Moerdijk</a></li></ul></div><div><h2>Kennisbank en Cyberdijk</h2><ul><li><a href="/kennisbank/">Alle artikels</a></li><li><a href="/kennisbank/nis2-maatregelen/">De tien maatregelen van NIS2</a></li><li><a href="/kennisbank/nis2-meldplicht-incident/">NIS2-meldplicht</a></li><li><a href="/kennisbank/nis2-boetes/">NIS2-boetes</a></li><li><a href="/kennisbank/iso-27001-maatregelen/">ISO 27001: de 93 maatregelen</a></li><li><a href="/kennisbank/verwerkingsregister/">Verwerkingsregister</a></li><li><a href="/kennisbank/datalek-melden-72-uur/">Datalek melden</a></li><li><a href="/kennisbank/ai-act-kmo-mkb/">AI Act voor kmo&#x27;s en mkb</a></li><li><a href="/kennisbank/begrippen/">Begrippenlijst</a></li><li><a href="/diensten/">Diensten (in voorbereiding)</a></li><li><a href="/over/">Over Cyberdijk</a></li><li><a href="/contact/">Contact</a></li><li><a href="/privacy/">Privacyverklaring</a></li><li><a href="/cookies/">Cookies</a></li></ul></div><div class="onder"><p>© 2026 Cyberdijk · <a href="/privacy/">Privacyverklaring</a> · <a href="/cookies/">Cookies</a> · <a href="/.well-known/security.txt">security.txt</a></p><p>Website door <a href="https://www.marketingbaas.com/" rel="noopener">Marketingbaas</a></p></div></div></footer><div class="plak"><a class="knop" href="/be/nis2-check/">Doe de gratis NIS2-check</a></div></body></html>

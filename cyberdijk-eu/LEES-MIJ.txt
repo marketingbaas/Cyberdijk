@@ -1,0 +1,79 @@
+CYBERDIJK.EU - WEBSITE, VERSIE 2 (KENNISSITE)
+Gebouwd op 1 oktober 2026, versie 2 op 1 oktober 2026. Statische site op Cloudflare Pages, geen cookies, geen externe scripts.
+
+NIEUW IN VERSIE 2
+- Ontwerp: nieuwe startpagina (hero met bewegende dijk, landkaarten, cijferband, vier vragen, stappen, kennisbank, FAQ),
+  landpagina's met kaarten per vraag en per regio, artikelpagina's met inhoudsopgave, "Lees ook" en een zijkolom
+  met de check, mobiel menu, donkere modus, en de donkere footer in de stijl van marketingbaas.com (met link naar Marketingbaas).
+- SEO: 12 nieuwe kennisbankartikels + begrippenlijst (39 pagina's, 38 in de sitemap), tags en automatische
+  "Lees ook"-links, FAQ-schema op elke pagina met vragen, WebSite/Organization/Article/DefinedTermSet-schema,
+  Open Graph met afmetingen, RSS-feed (/feed.xml), ankers per kop, sterkere titels.
+- Snelheid: CSS zit in de pagina (geen extra verzoek; CSP-hash staat in _headers), fallback-lettertype met
+  size-adjust tegen verspringen, lettertype en check.js een jaar cachebaar (immutable), check.js met versienummer.
+- Beveiliging: HSTS met preload, COOP, strikte CSP (geen inline scripts).
+- Verkoopkracht: bewegende hero (phishingmails, malware en waarschuwingen vallen op de dijk en spatten uiteen; de bedrijven
+  erachter krijgen een groen vinkje), dagenteller tot 18 april 2027 (BE) en sinds 15 augustus 2026 (NL) via assets/teller.js,
+  bronnenstrip onder de hero, en op telefoons een vaste knop onderaan naar de check (niet op de check- en contactpagina's).
+- Later toegevoegd: nieuw beeldmerk (tegel met golven en dijk, zelfde als favicon), pagina /diensten/ (in voorbereiding,
+  met wachtlijstformulier; beide formulieren gaan via functions/api/contact.js naar info@), opleidingen en certificaten
+  op de over-pagina (ISO 27001 LI, CIPP/E, CyFun, daarna CIPM/NIS2 LI/AIGP), /llms.txt, en SAMEAS in build.py voor
+  je LinkedIn-bedrijfspagina en Google Bedrijfsprofiel zodra die bestaan.
+
+
+INHOUD VAN DEZE MAP
+- site/   de website zelf (41 pagina's, sitemap, feed, robots, security.txt, _headers, functions/api/contact.js)
+- bron/   de bronbestanden: teksten in pages_be.py, pages_nl.py, pages_misc.py en pages_kennis.py; opbouw in build.py
+- cyberdijk-voorbeeld.html   alle pagina's in een enkel bestand, om te bekijken zonder server
+
+DOMEINEN KOPEN
+Cloudflare Registrar verkoopt zelf geen .eu, .be en .nl. Koop ze dus bij een gewone registrar en zet daarna de
+nameservers op Cloudflare (gratis plan), zoals bij marketingbaas.com. Op 1 oktober 2026 waren cyberdijk.eu, .be, .nl en .com
+nog vrij.
+- Koop alle vier bij één partij, op naam van Manufakt (ondernemingsnummer erbij): cyberdijk.eu (hoofddomein), .be, .nl en
+  .com (zodat niemand ermee aan de haal gaat). Reken op ongeveer 10 tot 15 euro per domein per jaar.
+- Geschikte registrars: Combell (Belgisch, Nederlandstalige helpdesk), Versio (Nederlands, goedkoop) of Openprovider.
+  GoDaddy kan ook. Kies de partij waar je al een account hebt; het verschil is enkele euro's per jaar.
+- Zet "automatisch verlengen" aan en WHOIS-privacy waar mogelijk (.be en .nl tonen bedrijfsgegevens sowieso beperkt).
+- Voor .eu moet de houder in de EU gevestigd zijn: Manufakt voldoet.
+
+ONLINE ZETTEN (CLOUDFLARE PAGES, ZOALS MARKETINGBAAS)
+1. Maak op GitHub een repository "cyberdijk" en zet daar de mappen bron/ en site/ in (uploaden via de GitHub-website werkt).
+2. Cloudflare > Workers & Pages > Create > Pages > Connect to Git > kies de repository.
+   Build command: cd bron && python3 build.py     Output directory: site
+   (Zonder build command kan ook: dan upload je telkens zelf de map site/ naar GitHub. Het formulier werkt in beide gevallen,
+   want de functie staat in site/functions/api/contact.js. Slepen via "Direct upload" werkt NIET: dan doet de functie het niet.)
+3. Pages > Settings > Variables and Secrets:
+   RESEND_API_KEY (geheim, dezelfde als bij Marketingbaas mag), MELD_EMAIL = info@cyberdijk.eu,
+   MAIL_FROM = Cyberdijk <formulier@cyberdijk.eu> (pas nadat cyberdijk.eu bij Resend geverifieerd is; tot dan weglaten).
+4. Domeinen: voeg per domein een site toe in Cloudflare (gratis plan) en zet bij de registrar de nameservers van Cloudflare.
+   Koppel cyberdijk.eu als Custom domain aan het Pages-project. De .be, .nl en .com koppel je NIET aan Pages; die krijgen
+   alleen een Redirect Rule (stap 5). Ze hebben wel een DNS-record nodig om de rule te laten werken: een AAAA-record
+   "@" naar 100:: en "www" naar 100::, proxy aan (oranje wolk).
+5. Redirect Rules (per domein onder Rules > Redirect Rules, of één keer onder Bulk Redirects op accountniveau):
+   - cyberdijk.be en www.cyberdijk.be  ->  https://cyberdijk.eu/be/   (301, "preserve path" uit)
+   - cyberdijk.nl en www.cyberdijk.nl  ->  https://cyberdijk.eu/nl/   (301)
+   - cyberdijk.com en www.cyberdijk.com -> https://cyberdijk.eu/      (301)
+   - www.cyberdijk.eu -> https://cyberdijk.eu/ met behoud van pad (dynamic: concat("https://cyberdijk.eu", http.request.uri.path), 301)
+6. E-mail: Cloudflare Email Routing op cyberdijk.eu: info@ doorsturen naar je Gmail, en in Gmail "verzenden als" via Resend
+   (zelfde opzet als info@marketingbaas.com). Zet SPF, DKIM en DMARC zoals Resend en Cloudflare ze opgeven.
+7. Test het contactformulier en de wachtlijst één keer live; het bericht moet in info@ aankomen.
+
+VERPLICHT VOOR DE LANCERING
+[ ] Vestigingsadres invullen: in bron/build.py de regel ADRES = "" aanvullen en opnieuw bouwen. Een adres op de site is voor Belgische ondernemingen verplicht.
+[ ] Handelsnaam Cyberdijk laten toevoegen bij Manufakt in de KBO, en de naam controleren in KBO, KvK en BOIP.
+[ ] Alle uitleg-, regio- en kennisbankpagina's nalezen naast de officiele bronnen. De teksten zijn opgesteld uit openbare bronnen, zonder juridische controle.
+    Let vooral op data en bedragen (termijnen NIS2-registratie, boetes, deadline 18 april 2027, kmo-portefeuille).
+[ ] Privacyverklaring nakijken: Cloudflare en Resend staan als verwerkers vermeld; past de bewaartermijn van twaalf maanden?
+[ ] Antwoordtermijn "binnen twee werkdagen" bevestigen of aanpassen.
+
+NA DE LANCERING
+[ ] Search Console als domeinproperty, sitemap indienen: https://cyberdijk.eu/sitemap.xml. Ook Bing Webmaster Tools.
+[ ] Testen op PageSpeed Insights, internet.nl en securityheaders.com.
+[ ] Elke week een artikel toevoegen: een nieuw dict in bron/pages_kennis.py (met tags, kort, faq, sources) en opnieuw bouwen.
+    Zet bij een bijgewerkt artikel updated="JJJJ-MM-DD" in het dict; dat komt in de sitemap, de feed en het schema.
+[ ] Na certificering: over-pagina bijwerken en dienstenpagina's toevoegen.
+
+AANPASSEN
+Tekst wijzigen: pas het bestand in bron/ aan en draai "python3 build.py" in die map. De map site/ wordt opnieuw opgebouwd.
+De build controleert titels (max. 60 tekens), meta-omschrijvingen (max. 155), dode links, ankers en hreflang.
+De CSS staat in build.py; na een CSS-wijziging herberekent de build de CSP-hash in _headers vanzelf.

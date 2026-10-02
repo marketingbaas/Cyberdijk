@@ -1,0 +1,2 @@
+# Omleidingen per domein (cyberdijk.be -> /be/, cyberdijk.nl -> /nl/, www -> zonder www) staan in Cloudflare als Redirect Rules; zie LEES-MIJ.txt.
+/index.html / 301
