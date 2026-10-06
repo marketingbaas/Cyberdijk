@@ -1,0 +1,21 @@
+name: Update uitpakken
+on:
+  push:
+    paths: ["cyberdijk-update.zip", ".github/workflows/uitpakken.yml"]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  uitpakken:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          [ -f cyberdijk-update.zip ] || exit 0
+          unzip -o cyberdijk-update.zip -x ".github/*"
+          git config user.name "cyberdijk-bot"
+          git config user.email "bot@cyberdijk.eu"
+          git add -A -- . ':!cyberdijk-update.zip'
+          git diff --cached --quiet && exit 0
+          git commit -m "Update uitgepakt"
+          git push
