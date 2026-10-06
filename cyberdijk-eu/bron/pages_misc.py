@@ -97,6 +97,37 @@ dict(
 ),
 ] + pages_kennis.PAGES + [pages_kennis.BEGRIPPEN_PAGE] + [
 dict(
+    path="/email-check/", lang="nl", kind="emailcheck", land="eu", crumbs=[], tags=["email", "phishing", "maatregelen"],
+    title="Gratis e-mailcheck: SPF, DKIM en DMARC | Cyberdijk",
+    desc="Kan iemand mailen uit naam van je bedrijf? Test gratis je SPF, DKIM en DMARC en zie meteen wat je moet doen. Er wordt niets bewaard.",
+    h1="Kan iemand mailen uit naam van jouw bedrijf?",
+    lede="Oplichters sturen valse facturen en betaalverzoeken die van je eigen domein lijken te komen. Drie DNS-records houden dat tegen: SPF, DKIM en DMARC. Test in tien seconden of ze bij jou goed staan.",
+    body="""
+<h2>Wat de check controleert</h2>
+<ul>
+<li><strong>DMARC:</strong> zegt aan mailservers wat ze moeten doen met een mail die zich voordoet als jouw domein maar de controles niet doorstaat. Pas met <code>p=quarantine</code> of <code>p=reject</code> worden vervalste mails echt tegengehouden.</li>
+<li><strong>SPF:</strong> de lijst van servers die namens jouw domein mogen mailen, zoals je mailbox, je boekhoudpakket of je nieuwsbriefprogramma.</li>
+<li><strong>DKIM:</strong> een digitale handtekening op elke mail, zodat de ontvanger ziet dat de mail onderweg niet is aangepast.</li>
+<li><strong>Mailserver en website:</strong> bij wie je mail binnenkomt en of je website via HTTPS werkt.</li>
+</ul>
+<h2>Waarom dit ertoe doet</h2>
+<p>Een valse mail vanaf je eigen domein is de eenvoudigste manier om je klanten een vervalste factuur met een ander rekeningnummer te sturen. Zonder DMARC in een strenge stand komt zo'n mail vaak gewoon aan. Daarnaast eisen grote mailproviders zoals Gmail steeds vaker dat afzenders SPF, DKIM en DMARC hebben; anders belanden ook je echte mails sneller in de spam.</p>
+<p>Voor bedrijven onder NIS2 hoort e-mailbeveiliging bij de basismaatregelen voor cyberhygiëne. Maar ook voor een kleine zaak is het een kwartier werk met een groot effect.</p>
+<h2>En daarna?</h2>
+<p>Lees <a href="/kennisbank/spf-dkim-dmarc/">hoe je SPF, DKIM en DMARC stap voor stap instelt</a>. Begin DMARC altijd in meetstand en zet het pas strenger als je zeker weet dat al je echte mail slaagt; anders blokkeer je je eigen facturen.</p>
+""",
+    faq=[
+        ("Wordt mijn domein of e-mailadres bewaard?", "Nee. De check vraagt alleen openbare DNS-gegevens op en toont het resultaat. Er wordt niets opgeslagen en je hoeft geen e-mailadres achter te laten."),
+        ("Mijn score is laag, maar mijn mail werkt toch?", "Dat kan. De check gaat er niet over of jouw mails aankomen, maar of iemand anders mails kan sturen die van jouw domein lijken te komen."),
+        ("De check vindt geen DKIM. Klopt dat?", "Niet altijd. DKIM staat onder een naam (selector) die per mailleverancier verschilt. We testen de gangbare namen van Google, Microsoft en de bekende mailprogramma's. Vraag het bij twijfel na bij je leverancier."),
+        ("Is p=none voldoende?", "Nee. Met p=none verzamel je alleen rapporten; vervalste mails komen nog steeds aan. Het is een goede eerste stap om te meten, niet het eindpunt."),
+    ],
+    sources=[("Google: richtlijnen voor e-mailafzenders", "https://support.google.com/mail/answer/81126?hl=nl"),
+             ("NCSC: handreiking Bescherm domeinnamen tegen phishing", "https://www.ncsc.nl/documenten/factsheets/2019/juni/01/factsheet-bescherm-domeinnamen-tegen-phishing"),
+             ("Internet.nl: uitleg over DMARC, DKIM en SPF", "https://internet.nl/faqs/mailauth/"),
+             ("RFC 7489: DMARC", "https://www.rfc-editor.org/rfc/rfc7489")],
+),
+dict(
     path="/diensten/", lang="nl", kind="diensten", land="eu", crumbs=[], tags=["nis2", "cyfun", "iso", "avg", "gdpr", "bestuur"],
     title="NIS2-, ISO 27001- en GDPR-begeleiding voor kmo's | Cyberdijk",
     desc="Begeleiding bij NIS2 en CyFun, ISO 27001, GDPR/AVG en de bestuursopleiding voor kmo's en mkb tussen Antwerpen en Breda. Zet je op de wachtlijst.",

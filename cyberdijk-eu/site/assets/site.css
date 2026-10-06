@@ -34,7 +34,7 @@ li{margin-bottom:.45rem}
 .m-t{fill:var(--ink)}.m-d{fill:var(--peil)}.m-w{fill:none;stroke:#7FC6DD;stroke-width:3.5;stroke-linecap:round}.m-g{stroke:var(--gras);stroke-width:3.5;stroke-linecap:round}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .m-t{fill:#1B6A85}}
 :root[data-theme="dark"] .m-t{fill:#1B6A85}
-.menu-schakel{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+.menu-schakel{position:absolute;left:0;top:0;margin:0;opacity:0;width:1px;height:1px;pointer-events:none}
 .menu-knop{display:inline-flex;align-items:center;gap:.45rem;font-weight:700;padding:.55rem .8rem;border:2px solid var(--line);border-radius:.5rem;cursor:pointer;background:var(--paper);color:var(--ink);order:3}
 .menu-knop span{display:block;width:1.1rem;height:2px;background:currentColor;box-shadow:0 -5px 0 currentColor,0 5px 0 currentColor}
 .menu-schakel:focus-visible+.menu-knop{outline:3px solid var(--peil);outline-offset:2px}
@@ -222,3 +222,24 @@ form .knop{margin-top:1.2rem}
 .voet .onder p{margin:0}
 .band{background:var(--peil);color:var(--on-peil);font-size:.92rem;padding:.4rem 1rem;text-align:center}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+.ec-form{margin-top:1.25rem}
+.ec-invoer{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.35rem}
+.ec-invoer input{flex:1 1 14rem;min-width:0}
+.ec-invoer .knop{flex:0 0 auto}
+.ec-uitkomst{padding:0;overflow:hidden}
+.ec-uitkomst>p{padding:1rem 1.4rem;margin:0}
+.ec-kop{padding:1.1rem 1.4rem;color:#fff}
+.ec-kop p{margin:0}
+.ec-rood{background:#B42318}
+.ec-groen{background:#2F6B2F}
+.ec-titel{font:700 1.3rem/1.25 var(--kop);overflow-wrap:anywhere}
+.ec-score{opacity:.9;margin-top:.2rem!important}
+.ec-rij{display:flex;gap:.8rem;align-items:flex-start;padding:1rem 1.4rem;border-top:1px solid var(--line)}
+.ec-rij h3{margin:0 0 .25rem;font-size:1.05rem}
+.ec-rij p{margin:0 0 .35rem;overflow-wrap:anywhere}
+.ec-bol{flex:none;width:1.6rem;height:1.6rem;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:800;font-size:.9rem;margin-top:.1rem}
+.ec-goed{background:#2F6B2F}
+.ec-matig{background:#B7791F}
+.ec-slecht{background:#B42318}
+.ec-cta{margin:0 1.4rem 1rem;box-shadow:none}
+.ec-cta:hover{transform:none}

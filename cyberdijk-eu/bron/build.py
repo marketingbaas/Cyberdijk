@@ -68,7 +68,7 @@ li{margin-bottom:.45rem}
 .m-t{fill:var(--ink)}.m-d{fill:var(--peil)}.m-w{fill:none;stroke:#7FC6DD;stroke-width:3.5;stroke-linecap:round}.m-g{stroke:var(--gras);stroke-width:3.5;stroke-linecap:round}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .m-t{fill:#1B6A85}}
 :root[data-theme="dark"] .m-t{fill:#1B6A85}
-.menu-schakel{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+.menu-schakel{position:absolute;left:0;top:0;margin:0;opacity:0;width:1px;height:1px;pointer-events:none}
 .menu-knop{display:inline-flex;align-items:center;gap:.45rem;font-weight:700;padding:.55rem .8rem;border:2px solid var(--line);border-radius:.5rem;cursor:pointer;background:var(--paper);color:var(--ink);order:3}
 .menu-knop span{display:block;width:1.1rem;height:2px;background:currentColor;box-shadow:0 -5px 0 currentColor,0 5px 0 currentColor}
 .menu-schakel:focus-visible+.menu-knop{outline:3px solid var(--peil);outline-offset:2px}
@@ -256,6 +256,27 @@ form .knop{margin-top:1.2rem}
 .voet .onder p{margin:0}
 .band{background:var(--peil);color:var(--on-peil);font-size:.92rem;padding:.4rem 1rem;text-align:center}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+.ec-form{margin-top:1.25rem}
+.ec-invoer{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.35rem}
+.ec-invoer input{flex:1 1 14rem;min-width:0}
+.ec-invoer .knop{flex:0 0 auto}
+.ec-uitkomst{padding:0;overflow:hidden}
+.ec-uitkomst>p{padding:1rem 1.4rem;margin:0}
+.ec-kop{padding:1.1rem 1.4rem;color:#fff}
+.ec-kop p{margin:0}
+.ec-rood{background:#B42318}
+.ec-groen{background:#2F6B2F}
+.ec-titel{font:700 1.3rem/1.25 var(--kop);overflow-wrap:anywhere}
+.ec-score{opacity:.9;margin-top:.2rem!important}
+.ec-rij{display:flex;gap:.8rem;align-items:flex-start;padding:1rem 1.4rem;border-top:1px solid var(--line)}
+.ec-rij h3{margin:0 0 .25rem;font-size:1.05rem}
+.ec-rij p{margin:0 0 .35rem;overflow-wrap:anywhere}
+.ec-bol{flex:none;width:1.6rem;height:1.6rem;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:800;font-size:.9rem;margin-top:.1rem}
+.ec-goed{background:#2F6B2F}
+.ec-matig{background:#B7791F}
+.ec-slecht{background:#B42318}
+.ec-cta{margin:0 1.4rem 1rem;box-shadow:none}
+.ec-cta:hover{transform:none}
 """
 
 # ---------------------------------------------------------------- JS (alleen op de checkpagina's)
@@ -328,6 +349,15 @@ if(document.readyState!=="loading"){window.initCheck();}else{document.addEventLi
 })();
 """
 JS_VERSIE = hashlib.sha256(CHECK_JS.strip().encode("utf-8")).hexdigest()[:8]
+# Gratis e-mailcheck (/email-check/): script voor de pagina en de Pages Function die de DNS leest.
+EMAILCHECK_JS = open(os.path.join(SRC, "emailcheck.js"), encoding="utf-8").read().strip()
+EC_VERSIE = hashlib.sha256(EMAILCHECK_JS.encode("utf-8")).hexdigest()[:8]
+EMAILCHECK_FUNCTIE = open(os.path.join(SRC, "emailcheck_functie.js"), encoding="utf-8").read().strip()
+EC_FORM = ('<form id="emailcheck" class="ec-form" novalidate><label for="ec-domein">Je domeinnaam of e-mailadres</label>'
+           '<div class="ec-invoer"><input id="ec-domein" name="d" inputmode="url" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="jouwbedrijf.be" required>'
+           '<button class="knop" type="submit">Check mijn e-mail</button></div>'
+           '<p class="klein">De check leest alleen openbare DNS-gegevens. Er wordt niets bewaard, je hoeft geen e-mailadres achter te laten.</p></form>'
+           '<div id="ec-uitkomst" class="uitkomst ec-uitkomst" tabindex="-1" aria-live="polite" hidden></div>')
 TELLER_JS = r"""window.initTeller=function(){var n=new Date();n.setHours(0,0,0,0);var l=document.querySelectorAll("[data-dag]");for(var i=0;i<l.length;i++){var el=l[i],d=new Date(el.getAttribute("data-dag")+"T00:00:00"),v=Math.round((d-n)/864e5),t=el.getAttribute(v>0?"data-voor":"data-na");if(t&&v!==0){el.textContent=t.replace("%d",Math.abs(v));}}};window.initTeller();"""
 TELLER_VERSIE = hashlib.sha256(TELLER_JS.encode("utf-8")).hexdigest()[:8]
 TELLER = {
@@ -396,7 +426,7 @@ NAV = [("België", "/be/"), ("Nederland", "/nl/"), ("Kennisbank", "/kennisbank/"
 VOET_BE = [("NIS2 en CyFun", "/be/nis2-cyfun/"), ("ISO 27001 voor kmo's", "/be/iso-27001/"), ("GDPR en DPO", "/be/gdpr-dpo/"), ("NIS2-check België", "/be/nis2-check/"), ("NIS2-registratie bij het CCB", "/kennisbank/nis2-registratie-ccb/"), ("CyFun-zelfevaluatie", "/kennisbank/cyfun-zelfevaluatie/"), ("Regio Antwerpen", "/be/regio/antwerpen/"), ("Regio Noorderkempen", "/be/regio/noorderkempen/")]
 VOET_NL = [("Cyberbeveiligingswet", "/nl/cyberbeveiligingswet-nis2/"), ("ISO 27001 voor mkb", "/nl/iso-27001/"), ("AVG en FG", "/nl/avg-fg/"), ("Cyberbeveiligingswet-check", "/nl/nis2-check/"), ("Roosendaal", "/nl/regio/roosendaal/"), ("Bergen op Zoom", "/nl/regio/bergen-op-zoom/"), ("Breda", "/nl/regio/breda/"), ("Moerdijk", "/nl/regio/moerdijk/")]
 VOET_KB = [("Alle artikels", "/kennisbank/"), ("De tien maatregelen van NIS2", "/kennisbank/nis2-maatregelen/"), ("NIS2-meldplicht", "/kennisbank/nis2-meldplicht-incident/"), ("NIS2-boetes", "/kennisbank/nis2-boetes/"), ("ISO 27001: de 93 maatregelen", "/kennisbank/iso-27001-maatregelen/"), ("Verwerkingsregister", "/kennisbank/verwerkingsregister/"), ("Datalek melden", "/kennisbank/datalek-melden-72-uur/"), ("AI Act voor kmo's en mkb", "/kennisbank/ai-act-kmo-mkb/"), ("Begrippenlijst", "/kennisbank/begrippen/")]
-VOET_CD = [("Diensten (in voorbereiding)", "/diensten/"), ("Over Cyberdijk", "/over/"), ("Contact", "/contact/"), ("Privacyverklaring", "/privacy/"), ("Cookies", "/cookies/")]
+VOET_CD = [("Gratis e-mailcheck", "/email-check/"), ("Diensten", "/diensten/"), ("Over Cyberdijk", "/over/"), ("Contact", "/contact/"), ("Privacyverklaring", "/privacy/"), ("Cookies", "/cookies/")]
 
 DOEN = {
  "be": '<h2>Wat je nu kan doen</h2><ul><li><a href="/be/nis2-check/">Doe de NIS2-check</a> en zie of je onderneming onder de wet valt.</li><li>Lees <a href="/be/nis2-cyfun/">wat NIS2 en CyFun vragen</a>, of wanneer <a href="/be/iso-27001/">ISO 27001</a> de betere keuze is.</li><li>Verwerk je klant- of personeelsgegevens? Lees <a href="/be/gdpr-dpo/">wat de GDPR verplicht</a>.</li><li><a href="/contact/">Stel je vraag</a>. Je krijgt binnen twee werkdagen antwoord.</li></ul>',
@@ -582,10 +612,17 @@ def zijkolom(p):
         knoppen = '<a class="knop" href="/be/nis2-check/">Check voor België</a><a class="knop licht" href="/nl/nis2-check/">Check voor Nederland</a>'
     if p["kind"] == "check":
         eerste = '<div class="kaart"><h2>Wat de check doet</h2><p>Drie vragen, meteen een antwoord. Er wordt niets opgeslagen of verstuurd.</p></div>'
+    elif p["kind"] == "emailcheck":
+        eerste = ('<div class="kaart"><h2>Wat de check doet</h2><p>Hij leest de openbare DNS-records van je domein: SPF, DKIM, DMARC en je mailserver, '
+                  'en kijkt of je website via HTTPS werkt. Er wordt niets opgeslagen.</p></div>'
+                  '<div class="kaart"><h2>Valt je bedrijf onder NIS2?</h2><p>Drie vragen, meteen een antwoord.</p>%s</div>') % knoppen
     else:
         eerste = '<div class="kaart"><h2>Waar staat je bedrijf?</h2><p>Drie vragen, meteen een antwoord. Gratis en zonder e-mailadres.</p>%s</div>' % knoppen
     rel = gerelateerd(p)
     lijst = ('<div class="kaart"><h2>Lees ook</h2><ul>%s</ul></div>' % "".join('<li><a href="%s">%s</a></li>' % (q["path"], e(q["h1"])) for q in rel)) if rel else ""
+    if p["kind"] not in ("emailcheck",):
+        eerste += ('<div class="kaart"><h2>Kan iemand mailen als jouw bedrijf?</h2><p>Test in tien seconden of je domein beschermd is tegen vervalste mails.</p>'
+                   '<a class="knop licht" href="/email-check/">Doe de e-mailcheck</a></div>')
     return ('<aside class="zij">%s%s<div class="kaart"><h2>Een vraag?</h2><p>Je krijgt binnen twee werkdagen antwoord per e-mail.</p><a class="knop licht" href="/contact/">Stel je vraag</a></div></aside>') % (eerste, lijst)
 
 
@@ -614,12 +651,17 @@ WACHTLIJST_FORM = ('<form name="wachtlijst" method="post" action="/api/contact">
 def main_diensten(p):
     hero = ('<section class="hero hero-land"><div class="wrap">%s<p class="kicker">In voorbereiding</p><h1>%s</h1><p class="lede">%s</p></div></section>') % (kruimel(p), e(p["h1"]), e(p["lede"]))
     kaarten = "".join('<div class="kaart"><span class="vlag">Vanaf 2027</span><h3>%s</h3><p>%s</p></div>' % (e(n), e(d)) for n, d, _ in DIENSTEN)
+    nu = ('<section class="sectie sectie-mist"><div class="wrap"><div class="sectie-kop"><h2>Nu al beschikbaar</h2><p>Gratis, zonder e-mailadres.</p></div><div class="kaarten">'
+          '<div class="kaart"><span class="vlag">Gratis</span><h3>E-mailcheck</h3><p>Test of iemand mails kan sturen uit naam van je bedrijf: SPF, DKIM, DMARC en je mailserver in tien seconden.</p><a class="pijl" href="/email-check/">Doe de e-mailcheck</a></div>'
+          '<div class="kaart"><span class="vlag">Gratis</span><h3>NIS2-check</h3><p>Drie vragen over je sector, je grootte en je klanten. Je weet meteen of je onder de wet valt.</p><a class="pijl" href="/be/nis2-check/">Doe de NIS2-check</a></div>'
+          '<div class="kaart"><span class="vlag">Technisch</span><h3>SPF, DKIM en DMARC laten instellen</h3><p>Geen tijd om het zelf te doen? Marketingbaas, ook van %s, zet het in orde voor €149 excl. btw, eenmalig: eerst meten, dan strenger zetten.</p><a class="pijl" href="https://www.marketingbaas.com/e-mail-beveiligen/?via=cyberdijk" rel="noopener">Bekijk het aanbod</a></div>'
+          '</div></div></section>') % LEGAL
     midden = ('<section class="sectie"><div class="wrap"><div class="sectie-kop"><h2>Waarmee Cyberdijk je straks helpt</h2><p>Begeleiding start na afronding van de certificering. Tot dan: gratis uitleg, de check en een antwoord op je vraag.</p></div>'
               '<div class="kaarten">%s</div></div></section>') % kaarten
     waarom = ('<section class="sectie sectie-mist"><div class="wrap"><div class="lees"><div class="kolom">%s%s</div>'
               '<aside class="zij"><div class="kaart"><h2>Zet je op de wachtlijst</h2><p>Je hoort het als eerste wanneer de begeleiding start, en je krijgt een voorrangstarief als eerste klant.</p>%s</div></aside></div></div></section>') % (
         p["body"], faq(p.get("faq")), WACHTLIJST_FORM)
-    return hero + midden + waarom + '<section class="sectie"><div class="wrap"><div class="kolom">%s%s</div></div></section>' % (CTA["eu"], NOTA)
+    return hero + nu + midden + waarom + '<section class="sectie"><div class="wrap"><div class="kolom">%s%s</div></div></section>' % (CTA["eu"], NOTA)
 
 # ---------------------------------------------------------------- pagina-inhoud per soort
 def main_home(p):
@@ -635,6 +677,10 @@ def main_home(p):
     landen += "</div></div></section>"
     check = ('<section class="sectie sectie-mist" id="check"><div class="wrap"><div class="sectie-kop"><h2>Weet je niet of je bedrijf onder NIS2 valt?</h2>'
              '<p>Doe de gratis check in vijf minuten. Drie vragen over je sector, je grootte en je klanten. Je krijgt meteen een antwoord, zonder je e-mailadres achter te laten.</p></div>%s</div></section>') % kies_land_knoppen()
+    mailsectie = ('<section class="sectie" id="e-mailcheck"><div class="wrap"><div class="sectie-kop"><h2>Kan iemand mailen uit naam van jouw bedrijf?</h2>'
+                  '<p>Valse facturen en betaalverzoeken vanaf je eigen domein zijn de meest gebruikte truc van oplichters. Drie DNS-records houden dat tegen: SPF, DKIM en DMARC. '
+                  'Test in tien seconden of ze bij jou goed staan.</p></div><p class="kies"><a class="knop" href="/email-check/">Doe de gratis e-mailcheck</a>'
+                  '<a class="knop licht" href="/kennisbank/spf-dkim-dmarc/">Wat zijn SPF, DKIM en DMARC?</a></p></div></section>')
     cijfers = ('<section class="cijfers"><div class="wrap">'
                '<div class="cijfer"><b>18 april 2027</b><span>Deadline voor essentiële entiteiten in België om hun conformiteit te laten beoordelen.</span></div>'
                '<div class="cijfer"><b>15 augustus 2026</b><span>De Cyberbeveiligingswet geldt in Nederland, zonder overgangsperiode.</span></div>'
@@ -653,7 +699,7 @@ def main_home(p):
     kb = '<section class="sectie"><div class="wrap"><div class="sectie-kop"><h2>Uit de kennisbank</h2><p>Elke week een artikel dat één vraag beantwoordt.</p></div>%s<p class="kies" style="margin-top:1.5rem"><a class="knop licht" href="/kennisbank/">Alle artikels</a><a href="/kennisbank/begrippen/">Begrippenlijst</a></p></div></section>' % artikel_kaarten(list(reversed(ARTIKELS)), 6)
     vr = '<section class="sectie sectie-mist"><div class="wrap"><div class="kolom">%s</div></div></section>' % faq(HOME_FAQ)
     band = '<section class="band-knop"><div class="wrap"><h2>Klaar om te weten waar je staat?</h2><p>De check is gratis en bewaart niets. Daarna lees je per onderwerp wat je moet regelen.</p>%s</div></section>' % kies_land_knoppen()
-    return hero + landen + check + cijfers + kaarten + stappen + kb + vr + band
+    return hero + landen + check + mailsectie + cijfers + kaarten + stappen + kb + vr + band
 
 
 def main_hub(p):
@@ -706,6 +752,8 @@ def main_inner(p):
     body = p.get("body", "")
     if k == "check":
         return '<div class="wrap"><div class="lees"><div class="kolom">%s%s%s%s%s</div>%s</div></div>' % (kop, check_form(land), body, bronnen(p), NOTA, zijkolom(p))
+    if k == "emailcheck":
+        return '<div class="wrap"><div class="lees"><div class="kolom">%s%s%s%s%s%s</div>%s</div></div>' % (kop, EC_FORM, body, faq(p.get("faq")), bronnen(p), NOTA, zijkolom(p))
     if k == "contact":
         return '<div class="wrap"><div class="contact-blok"><div class="kolom">%s%s</div>%s</div></div>' % (kop, CONTACT_FORM, CONTACT_ZIJ)
     if k == "vast":
@@ -810,6 +858,8 @@ def head(p, css):
         h.append('<script src="/assets/check.js?v=%s" defer></script>' % JS_VERSIE)
     if p["kind"] in ("home", "hub"):
         h.append('<script src="/assets/teller.js?v=%s" defer></script>' % TELLER_VERSIE)
+    if p["kind"] == "emailcheck":
+        h.append('<script src="/assets/emailcheck.js?v=%s" defer></script>' % EC_VERSIE)
     h.append(jsonld(p))
     return "".join(h)
 
@@ -820,7 +870,7 @@ def css_site():
 
 def plakknop(p):
     """Vaste knop onderaan op telefoons, behalve op de check- en contactpagina's zelf."""
-    if p["kind"] in ("check", "contact") or p.get("noindex"):
+    if p["kind"] in ("check", "contact", "emailcheck") or p.get("noindex"):
         return ""
     land = p.get("land")
     u, t = {"be": ("/be/nis2-check/", "Doe de gratis NIS2-check"), "nl": ("/nl/nis2-check/", "Doe de gratis check")}.get(land, ("/be/nis2-check/", "Doe de gratis NIS2-check"))
@@ -862,6 +912,7 @@ def build():
     write("/assets/site.css", css)                       # ter inzage; de pagina's gebruiken de ingebouwde versie
     write("/assets/check.js", CHECK_JS.strip())
     write("/assets/teller.js", TELLER_JS)
+    write("/assets/emailcheck.js", EMAILCHECK_JS)
     os.makedirs(os.path.join(OUT, "assets/fonts"), exist_ok=True)
     shutil.copy(os.path.join(SRC, "fonts/archivo-head.woff2"), os.path.join(OUT, "assets/fonts/archivo-head.woff2"))
     shutil.copy(os.path.join(SRC, "fonts/OFL.txt"), os.path.join(OUT, "assets/fonts/OFL.txt"))
@@ -877,8 +928,9 @@ def build():
     write("/_headers", ("/*\n  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload\n  X-Content-Type-Options: nosniff\n  X-Frame-Options: DENY\n"
                         "  Referrer-Policy: strict-origin-when-cross-origin\n  Permissions-Policy: camera=(), microphone=(), geolocation=()\n  Cross-Origin-Opener-Policy: same-origin\n"
                         "  Content-Security-Policy: default-src 'self'; img-src 'self' data:; style-src 'self' 'sha256-%s'; script-src 'self'; font-src 'self'; form-action 'self'; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests\n"
-                        "/assets/fonts/*\n  Cache-Control: public, max-age=31536000, immutable\n/assets/check.js\n  Cache-Control: public, max-age=31536000, immutable\n/assets/teller.js\n  Cache-Control: public, max-age=31536000, immutable\n/assets/*\n  Cache-Control: public, max-age=604800\n/favicon.svg\n  Cache-Control: public, max-age=604800\n") % css_hash)
+                        "/assets/fonts/*\n  Cache-Control: public, max-age=31536000, immutable\n/assets/check.js\n  Cache-Control: public, max-age=31536000, immutable\n/assets/teller.js\n  Cache-Control: public, max-age=31536000, immutable\n/assets/emailcheck.js\n  Cache-Control: public, max-age=31536000, immutable\n/assets/*\n  Cache-Control: public, max-age=604800\n/favicon.svg\n  Cache-Control: public, max-age=604800\n") % css_hash)
     write("/functions/api/contact.js", CONTACT_FUNCTIE.strip() + "\n")
+    write("/functions/api/emailcheck.js", EMAILCHECK_FUNCTIE + "\n")
     write("/_redirects", "# Omleidingen per domein (cyberdijk.be -> /be/, cyberdijk.nl -> /nl/, www -> zonder www) staan in Cloudflare als Redirect Rules; zie LEES-MIJ.txt.\n/index.html / 301\n")
     return idx
 
@@ -895,7 +947,7 @@ var view=document.getElementById("weergave"),knop=document.getElementById("topkn
 function toon(pad){var t=document.querySelector('template[data-path="'+pad+'"]');if(!t){return false;}
 view.textContent="";view.appendChild(t.content.cloneNode(true));document.title=t.getAttribute("data-title");
 var l=t.getAttribute("data-land");knop.setAttribute("href",l==="be"?"/be/nis2-check/":l==="nl"?"/nl/nis2-check/":"/#check");knop.textContent=l==="be"?"Doe de NIS2-check":"Doe de check";
-if(menu){menu.checked=false;}window.scrollTo(0,0);if(window.initCheck){window.initCheck();}if(window.initTeller){window.initTeller();}return true;}
+if(menu){menu.checked=false;}window.scrollTo(0,0);if(window.initCheck){window.initCheck();}if(window.initEmailcheck){window.initEmailcheck();}if(window.initTeller){window.initTeller();}return true;}
 document.addEventListener("click",function(ev){var a=ev.target.closest("a");if(!a){return;}var h=a.getAttribute("href")||"";
 if(h.charAt(0)==="#"){return;}
 if(h.charAt(0)==="/"){ev.preventDefault();var deel=h.split("#");toon(deel[0]||"/");if(deel[1]){var el=document.getElementById(deel[1]);if(el){el.scrollIntoView();}}}
@@ -906,8 +958,8 @@ toon("/");
 """
     hdr = header(home).replace('<a class="knop" href="/#check">', '<a class="knop" id="topknop" href="/#check">')
     doc = ('<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Cyberdijk: voorbeeld van de website</title>'
-           '<style>%s</style></head><body><div class="band">Voorbeeld van cyberdijk.eu. De site staat nog niet online.</div>%s<main id="inhoud"><div id="weergave"></div></main>%s%s<script>%s</script><script>%s</script><script>%s</script></body></html>') % (
-        css, hdr, footer(), tpl, CHECK_JS, router, TELLER_JS)
+           '<style>%s</style></head><body><div class="band">Voorbeeld van cyberdijk.eu. De site staat nog niet online.</div>%s<main id="inhoud"><div id="weergave"></div></main>%s%s<script>%s</script><script>%s</script><script>%s</script><script>%s</script></body></html>') % (
+        css, hdr, footer(), tpl, CHECK_JS, EMAILCHECK_JS, router, TELLER_JS)
     with open(os.path.join(os.path.dirname(SRC), "cyberdijk-voorbeeld.html"), "w", encoding="utf-8") as f:
         f.write(doc)
     return len(doc)

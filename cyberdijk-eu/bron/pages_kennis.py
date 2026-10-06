@@ -504,6 +504,58 @@ dict(
     ],
     sources=[("Verordening (EU) 2024/1689 (AI Act) op EUR-Lex", "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"), ("Europese Commissie: AI Act Service Desk", "https://ai-act-service-desk.ec.europa.eu"), ("DQS: nieuwe deadlines na het stop-de-klok-mechanisme", "https://www.dqsglobal.com/nl/over/nieuws/eu-ai-wet-parlement-raad-align-on-postponing-high-risk-ai-verplichtingen")],
 ),
+dict(
+    path="/kennisbank/spf-dkim-dmarc/", lang="nl", kind="artikel", land="eu", crumbs=KB, tags=["email", "phishing", "maatregelen"],
+    title="SPF, DKIM en DMARC instellen: zo werkt het | Cyberdijk",
+    desc="Stop vervalste mails uit naam van je bedrijf. Wat SPF, DKIM en DMARC doen, in welke volgorde je ze instelt en hoe je je eigen mail niet blokkeert.",
+    h1="SPF, DKIM en DMARC: zo stop je vervalste mails uit naam van je bedrijf",
+    lede="Iedereen kan een mail sturen met jouw adres als afzender, tenzij je domein zegt dat het niet mag. Dat doe je met drie DNS-records. Dit is wat ze doen en in welke volgorde je ze instelt.",
+    kort=[
+        "SPF zegt welke servers namens je domein mogen mailen, DKIM zet een handtekening op elke mail.",
+        "DMARC zegt wat ontvangers moeten doen als een mail die controles niet doorstaat.",
+        "Begin DMARC in meetstand (p=none) en ga pas na enkele weken naar quarantine of reject.",
+    ],
+    body="""
+<h2>Waarom je dit nodig hebt</h2>
+<p>E-mail is gebouwd in een tijd waarin niemand aan oplichters dacht. Het afzenderadres is gewoon tekst: wie wil, zet er factuur@jouwbedrijf.be in. Criminelen gebruiken dat voor valse facturen, nepbetaalverzoeken van "de zaakvoerder" en phishing naar je klanten. SPF, DKIM en DMARC geven ontvangers een manier om na te gaan of een mail echt van jou komt, en zeggen wat ze moeten doen als dat niet zo is.</p>
+<p>Er is ook een tweede reden: grote mailproviders stellen eisen. Google vraagt van alle afzenders naar Gmail-adressen SPF of DKIM, en van wie veel mailt ook DMARC. Wie dat niet heeft, ziet zijn echte mails sneller in de spam belanden.</p>
+<h2>SPF: wie mag namens jou mailen?</h2>
+<p>SPF is één TXT-record op je domein met de lijst van servers die voor jou mogen mailen. Denk aan je mailbox (Microsoft 365, Google Workspace, je hostingbedrijf), maar ook aan je boekhoudpakket dat facturen mailt, je webshop en je nieuwsbriefprogramma. Een voorbeeld:</p>
+<p><code>v=spf1 include:spf.protection.outlook.com include:_spf.google.com ~all</code></p>
+<p>Let op twee dingen. Er mag maar één SPF-record zijn: twee records maken SPF ongeldig. En het record eindigt op <code>~all</code> of <code>-all</code>, zodat andere servers niet meetellen. Een record met <code>+all</code> laat iedereen toe en is erger dan niets.</p>
+<h2>DKIM: een handtekening op elke mail</h2>
+<p>Met DKIM zet je mailserver een digitale handtekening op elke uitgaande mail. De bijhorende publieke sleutel staat in je DNS, onder een naam die je leverancier kiest (een selector, zoals <code>selector1._domainkey</code> bij Microsoft of <code>google._domainkey</code> bij Google). DKIM zet je aan in het beheer van je mailleverancier; die geeft je de records die je in je DNS plaatst. Doe dat voor elke dienst die namens jou mailt.</p>
+<h2>DMARC: wat moet er gebeuren met vervalste mails?</h2>
+<p>DMARC verbindt de twee. Het zegt: een mail die van mijn domein beweert te komen, moet SPF of DKIM doorstaan voor mijn eigen domein. Lukt dat niet, doe dan dit. Dat "dit" is het beleid:</p>
+<ul>
+<li><code>p=none</code>: niets doen, alleen rapporteren. Handig om te meten, maar het houdt niets tegen.</li>
+<li><code>p=quarantine</code>: de mail als spam behandelen.</li>
+<li><code>p=reject</code>: de mail weigeren.</li>
+</ul>
+<p>Een DMARC-record staat op <code>_dmarc.jouwbedrijf.be</code> en ziet er bijvoorbeeld zo uit: <code>v=DMARC1; p=none; rua=mailto:dmarc@jouwbedrijf.be</code>. Het rua-adres krijgt dagelijks rapporten van de grote mailproviders: welke servers mailden namens jouw domein, en slaagden ze voor SPF en DKIM?</p>
+<h2>In welke volgorde, zonder je eigen mail te blokkeren</h2>
+<ol>
+<li><strong>Maak een lijst van alles wat namens je mailt:</strong> mailbox, boekhouding, facturatie, webshop, nieuwsbrief, offerteprogramma, de printer op kantoor.</li>
+<li><strong>Zet SPF goed:</strong> één record met al die diensten erin, eindigend op <code>~all</code>.</li>
+<li><strong>Zet DKIM aan</strong> bij elke dienst die het ondersteunt.</li>
+<li><strong>Zet DMARC op p=none met een rapportadres</strong> en lees twee tot vier weken de rapporten. Duikt er een echte dienst op die faalt? Voeg die toe aan SPF of zet er DKIM aan.</li>
+<li><strong>Ga naar p=quarantine,</strong> en na nog een paar weken zonder problemen naar <strong>p=reject</strong>.</li>
+</ol>
+<p>Gebruik je een domein niet om te mailen, bijvoorbeeld een extra .com of .nl? Zet dan meteen <code>v=spf1 -all</code> en <code>v=DMARC1; p=reject</code>. Ook ongebruikte domeinen worden misbruikt.</p>
+<h2>Controleer het resultaat</h2>
+<p>Met de <a href="/email-check/">gratis e-mailcheck</a> zie je in tien seconden hoe je domein ervoor staat. Wil je een uitgebreidere test, dan kan dat ook op internet.nl.</p>
+""",
+    faq=[
+        ("Kan ik mijn eigen mail blokkeren met DMARC?", "Ja, als je meteen op p=reject gaat terwijl een dienst die namens jou mailt nog niet in SPF staat of geen DKIM heeft. Begin daarom altijd met p=none en lees de rapporten."),
+        ("Hoe lang duurt het instellen?", "Het plaatsen van de records duurt een kwartier. De meetperiode met p=none duurt best twee tot vier weken, afhankelijk van hoeveel diensten namens je mailen."),
+        ("Moet een kleine zaak dit ook doen?", "Ja. Oplichters kiezen niet op grootte. Een valse factuur vanaf het domein van een lokale aannemer werkt even goed als een vanaf een groot bedrijf."),
+    ],
+    sources=[("Google: richtlijnen voor e-mailafzenders", "https://support.google.com/mail/answer/81126?hl=nl"),
+             ("NCSC: handreiking Bescherm domeinnamen tegen phishing", "https://www.ncsc.nl/documenten/factsheets/2019/juni/01/factsheet-bescherm-domeinnamen-tegen-phishing"),
+             ("Internet.nl: uitleg over DMARC, DKIM en SPF", "https://internet.nl/faqs/mailauth/"),
+             ("RFC 7489: DMARC", "https://www.rfc-editor.org/rfc/rfc7489"),
+             ("RFC 7208: SPF", "https://www.rfc-editor.org/rfc/rfc7208")],
+),
 ]
 
 # Begrippenlijst: term, uitleg. Wordt een aparte pagina met DefinedTermSet-schema.

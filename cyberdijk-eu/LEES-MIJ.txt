@@ -20,6 +20,17 @@ NIEUW IN VERSIE 2
   je LinkedIn-bedrijfspagina en Google Bedrijfsprofiel zodra die bestaan.
 
 
+NIEUW OP 5 OKTOBER 2026: GRATIS E-MAILCHECK
+- /email-check/: test SPF, DKIM, DMARC, mailserver en HTTPS van elk domein (functions/api/emailcheck.js leest alleen
+  openbare DNS via DNS-over-HTTPS en bewaart niets; script in assets/emailcheck.js, bron in bron/emailcheck*.js).
+- Nieuw kennisbankartikel /kennisbank/spf-dkim-dmarc/ (stappenplan), een blok op de startpagina, een kaart in elke
+  zijkolom en "Nu al beschikbaar" op /diensten/.
+- Laten oplossen verwijst naar marketingbaas.com/e-mail-beveiligen/ (€149 excl. btw, technisch werk door Marketingbaas),
+  zodat Cyberdijk zelf pas na de certificering betaalde begeleiding aanbiedt, zoals beloofd op /diensten/ en /over/.
+- Hersteld: het verborgen menuvakje zorgde op elke pagina voor horizontaal scrollen (20 px te breed). Opgelost in de CSS.
+- Bijwerken: upload cyberdijk-update.zip in de hoofdmap van de repository marketingbaas/Cyberdijk; de workflow
+  .github/workflows/uitpakken.yml pakt hem uit en Cloudflare publiceert automatisch.
+
 INHOUD VAN DEZE MAP
 - site/   de website zelf (41 pagina's, sitemap, feed, robots, security.txt, _headers, functions/api/contact.js)
 - bron/   de bronbestanden: teksten in pages_be.py, pages_nl.py, pages_misc.py en pages_kennis.py; opbouw in build.py
