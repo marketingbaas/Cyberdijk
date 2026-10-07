@@ -205,7 +205,8 @@ details p{margin:.6rem 0 0;max-width:70ch}
 .lees-ook a{font-weight:600}
 .lees-ook span{display:block;color:var(--muted);font-size:.9rem}
 /* artikel met zijkolom */
-.lees{display:grid;gap:2.5rem;align-items:start}
+.lees{display:grid;gap:2.5rem;align-items:start;grid-template-columns:minmax(0,1fr)}
+.kolom,.zij,.lees-ook{overflow-wrap:anywhere;hyphens:auto}
 @media (min-width:62rem){.lees{grid-template-columns:minmax(0,44rem) 17rem;gap:4rem}.zij{position:sticky;top:5rem}}
 .zij .kaart{margin-bottom:1.25rem}
 .zij .kaart h2{font-size:1.05rem}
@@ -931,6 +932,7 @@ def build():
                         "/assets/fonts/*\n  Cache-Control: public, max-age=31536000, immutable\n/assets/check.js\n  Cache-Control: public, max-age=31536000, immutable\n/assets/teller.js\n  Cache-Control: public, max-age=31536000, immutable\n/assets/emailcheck.js\n  Cache-Control: public, max-age=31536000, immutable\n/assets/*\n  Cache-Control: public, max-age=604800\n/favicon.svg\n  Cache-Control: public, max-age=604800\n") % css_hash)
     write("/functions/api/contact.js", CONTACT_FUNCTIE.strip() + "\n")
     write("/functions/api/emailcheck.js", EMAILCHECK_FUNCTIE + "\n")
+    write("/functions/_middleware.js", open(os.path.join(SRC, "middleware.js"), encoding="utf-8").read())
     write("/_redirects", "# Omleidingen per domein (cyberdijk.be -> /be/, cyberdijk.nl -> /nl/, www -> zonder www) staan in Cloudflare als Redirect Rules; zie LEES-MIJ.txt.\n/index.html / 301\n")
     return idx
 

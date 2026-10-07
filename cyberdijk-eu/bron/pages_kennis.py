@@ -558,6 +558,9 @@ dict(
 ),
 ]
 
+from pages_avg import PAGES as _AVG_PAGES
+PAGES = PAGES + _AVG_PAGES
+
 # Begrippenlijst: term, uitleg. Wordt een aparte pagina met DefinedTermSet-schema.
 BEGRIPPEN = [
     ("NIS2", "Europese richtlijn (EU) 2022/2555 over de beveiliging van netwerk- en informatiesystemen. Elk land zet ze om in een eigen wet: in België de NIS2-wet van 2024, in Nederland de Cyberbeveiligingswet."),

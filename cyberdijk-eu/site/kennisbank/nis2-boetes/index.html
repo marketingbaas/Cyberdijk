@@ -171,7 +171,8 @@ details p{margin:.6rem 0 0;max-width:70ch}
 .lees-ook a{font-weight:600}
 .lees-ook span{display:block;color:var(--muted);font-size:.9rem}
 /* artikel met zijkolom */
-.lees{display:grid;gap:2.5rem;align-items:start}
+.lees{display:grid;gap:2.5rem;align-items:start;grid-template-columns:minmax(0,1fr)}
+.kolom,.zij,.lees-ook{overflow-wrap:anywhere;hyphens:auto}
 @media (min-width:62rem){.lees{grid-template-columns:minmax(0,44rem) 17rem;gap:4rem}.zij{position:sticky;top:5rem}}
 .zij .kaart{margin-bottom:1.25rem}
 .zij .kaart h2{font-size:1.05rem}
