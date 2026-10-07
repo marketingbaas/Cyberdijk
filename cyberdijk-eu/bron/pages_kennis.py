@@ -560,6 +560,8 @@ dict(
 
 from pages_avg import PAGES as _AVG_PAGES
 PAGES = PAGES + _AVG_PAGES
+from pages_ai import PAGES as _AI_PAGES
+PAGES = PAGES + _AI_PAGES
 
 # Begrippenlijst: term, uitleg. Wordt een aparte pagina met DefinedTermSet-schema.
 BEGRIPPEN = [
