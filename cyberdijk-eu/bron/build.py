@@ -922,7 +922,9 @@ def build():
     idx = [p for p in PAGES if not p.get("noindex")]
     write("/sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n%s\n</urlset>\n' % "\n".join("<url><loc>%s%s</loc><lastmod>%s</lastmod></url>" % (BASE, p["path"], p.get("updated", DATUM)) for p in idx))
     write("/feed.xml", feed())
-    write("/robots.txt", "User-agent: *\nAllow: /\n\nSitemap: %s/sitemap.xml\n" % BASE)
+    # Extra sitemap-index: Search Console bleef de eerste inzending als "kan niet ophalen" tonen.
+    write("/sitemap_index.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n<sitemap><loc>%s/sitemap.xml</loc><lastmod>%s</lastmod></sitemap>\n</sitemapindex>\n' % (BASE, DATUM))
+    write("/robots.txt", "User-agent: *\nAllow: /\n\nSitemap: %s/sitemap_index.xml\nSitemap: %s/sitemap.xml\n" % (BASE, BASE))
     write("/llms.txt", "# %s\n\n> Heldere uitleg over NIS2, CyFun, ISO 27001 en GDPR/AVG voor kmo's en mkb in België en Nederland. Gratis NIS2-check, geen cookies, bronnen bij elk artikel.\n\n## Pagina's\n\n%s\n" % (
         BRAND, "\n".join("- [%s](%s%s): %s" % (p["h1"], BASE, p["path"], p["desc"]) for p in idx)))
     write("/.well-known/security.txt", "Contact: mailto:%s\nExpires: 2027-10-01T00:00:00.000Z\nPreferred-Languages: nl, en\nCanonical: %s/.well-known/security.txt\n" % (EMAIL, BASE))
