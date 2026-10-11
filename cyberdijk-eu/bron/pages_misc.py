@@ -130,7 +130,7 @@ dict(
 dict(
     path="/diensten/", lang="nl", kind="diensten", land="eu", crumbs=[], tags=["nis2", "cyfun", "iso", "avg", "gdpr", "bestuur"],
     title="NIS2-, ISO 27001- en GDPR-begeleiding voor kmo's | Cyberdijk",
-    desc="Begeleiding bij NIS2 en CyFun, ISO 27001, GDPR/AVG en de bestuursopleiding voor kmo's en mkb tussen Antwerpen en Breda. Zet je op de wachtlijst.",
+    desc="Begeleiding bij NIS2 en CyFun, ISO 27001, NEN 7510, GDPR/AVG en externe DPO voor kmo's en mkb in België en Nederland. Zet je op de wachtlijst.",
     h1="Begeleiding bij NIS2, ISO 27001 en GDPR voor kmo's en mkb",
     lede="Cyberdijk is vandaag een kennissite. Begeleiding start na afronding van de certificering, verwacht in 2027. Wil je er als eerste bij zijn? Zet je op de wachtlijst, dan hoor je het meteen en krijg je een voorrangstarief.",
     body="""

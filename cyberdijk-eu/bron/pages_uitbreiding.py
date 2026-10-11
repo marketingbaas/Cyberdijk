@@ -260,6 +260,432 @@ dict(
              ("Gegevensbeschermingsautoriteit (België)", "https://www.gegevensbeschermingsautoriteit.be"),
              ("Autoriteit Persoonsgegevens (Nederland)", "https://www.autoriteitpersoonsgegevens.nl")],
 ),
+dict(
+    path="/kennisbank/nis2/", lang="nl", kind="artikel", land="eu", crumbs=[("Kennisbank", "/kennisbank/")],
+    tags=["nis2", "maatregelen", "meldplicht", "registratie", "boetes", "cyfun", "iso"], updated="2026-10-11",
+    title="NIS2 uitgelegd: complete gids voor België en Nederland",
+    desc="Alles over NIS2 op één plek: wie valt eronder, de plichten, deadlines, boetes en het verschil tussen de Belgische NIS2-wet en de Cyberbeveiligingswet.",
+    h1="NIS2 uitgelegd: de complete gids voor België en Nederland",
+    lede="NIS2 is de Europese richtlijn die duizenden organisaties verplicht om hun digitale beveiliging aantoonbaar op orde te hebben. België en Nederland hebben ze elk op hun eigen manier omgezet. Deze gids zet alles op een rij en verwijst je door naar de uitleg per onderwerp.",
+    kort=[
+        "België: NIS2-wet sinds 18 oktober 2024, toezicht door het CCB, beoordeling voor essentiële entiteiten tegen 18 april 2027.",
+        "Nederland: Cyberbeveiligingswet sinds 15 augustus 2026, zonder overgangsperiode, registratie bij het NCSC.",
+        "In de regel vanaf 50 medewerkers of meer dan 10 miljoen euro omzet en balanstotaal, in aangewezen sectoren.",
+    ],
+    body="""
+<h2>Wat is NIS2?</h2>
+<p>NIS2 is Richtlijn (EU) 2022/2555 over maatregelen voor een hoog gezamenlijk niveau van cyberbeveiliging in de Unie. Ze vervangt de eerste NIS-richtlijn uit 2016 en breidt het aantal sectoren en organisaties fors uit. Het doel: organisaties die belangrijk zijn voor economie en samenleving moeten hun risico's beheersen, ernstige incidenten snel melden en hun bestuur verantwoordelijk maken voor cyberbeveiliging. Elke lidstaat moest de richtlijn omzetten in eigen wetgeving.</p>
+<h2>België en Nederland naast elkaar</h2>
+<div style="overflow-x:auto"><table style="min-width:520px">
+<thead><tr><th></th><th>België</th><th>Nederland</th></tr></thead>
+<tbody>
+<tr><td>Wet</td><td>NIS2-wet</td><td>Cyberbeveiligingswet (Cbw)</td></tr>
+<tr><td>Van kracht</td><td>18 oktober 2024</td><td>15 augustus 2026, zonder overgangsperiode</td></tr>
+<tr><td>Registratie</td><td>Bij het CCB via Safeonweb@Work</td><td>In het entiteitenregister van het NCSC</td></tr>
+<tr><td>Maatregelen aantonen</td><td>Met CyFun of ISO 27001</td><td>Zorgplicht op basis van een risicoanalyse</td></tr>
+<tr><td>Belangrijke deadline</td><td>Conformiteitsbeoordeling essentiële entiteiten tegen 18 april 2027</td><td>Plichten gelden meteen</td></tr>
+<tr><td>Incidenten melden</td><td>Bij het CCB</td><td>Bij het CSIRT en de sectortoezichthouder</td></tr>
+</tbody></table></div>
+<h2>Valt mijn organisatie onder NIS2?</h2>
+<p>Twee dingen bepalen het: je sector en je grootte. De richtlijn noemt sectoren als energie, transport, bankwezen, gezondheidszorg, drinkwater, digitale infrastructuur, ICT-dienstverlening, overheid, post, afvalbeheer, chemie, levensmiddelen en maakindustrie. In de regel val je eronder vanaf 50 medewerkers, of met een jaaromzet en balanstotaal boven 10 miljoen euro. Voor enkele digitale diensten geldt de wet ongeacht de grootte. Grote organisaties in de meest kritieke sectoren zijn <strong>essentiële entiteiten</strong>, de andere <strong>belangrijke entiteiten</strong>. <a href="/kennisbank/valt-mijn-bedrijf-onder-nis2/">Lees hoe je het nagaat</a>, of doe de check voor <a href="/be/nis2-check/">België</a> of <a href="/nl/nis2-check/">Nederland</a>.</p>
+<h2>De plichten in het kort</h2>
+<ul>
+<li><strong>Registreren</strong> bij de nationale autoriteit. <a href="/kennisbank/nis2-registratie-ccb/">Zo registreer je in België.</a></li>
+<li><strong>Maatregelen nemen</strong> op basis van een risicoanalyse: van tweestapsverificatie en back-ups tot leveranciersbeheer en incidentrespons. <a href="/kennisbank/nis2-maatregelen/">De tien maatregelen uitgelegd.</a></li>
+<li><strong>Incidenten melden</strong> in drie stappen: 24 uur, 72 uur en een maand. <a href="/kennisbank/nis2-meldplicht-incident/">Zo werkt de meldplicht.</a></li>
+<li><strong>Het bestuur</strong> keurt de maatregelen goed, volgt een opleiding en is aansprakelijk. <a href="/kennisbank/nis2-bestuur-aansprakelijkheid/">Wat dat betekent voor bestuurders.</a></li>
+</ul>
+<h2>Boetes en toezicht</h2>
+<p>Essentiële entiteiten riskeren boetes tot 10 miljoen euro of 2% van de wereldwijde jaaromzet, belangrijke tot 7 miljoen euro of 1,4%. Meestal beginnen toezichthouders met waarschuwingen en bindende instructies. <a href="/kennisbank/nis2-boetes/">Alle sancties op een rij.</a></p>
+<h2>Ook als je er zelf niet onder valt</h2>
+<p>Organisaties onder NIS2 moeten ook de beveiliging van hun leveranciers beoordelen. Daardoor krijgen veel kleinere bedrijven vragenlijsten en contractclausules van hun klanten. <a href="/kennisbank/nis2-vragenlijst-leverancier/">Zo beantwoord je een NIS2-vragenlijst.</a> De basismaatregelen voor elke kmo vind je in <a href="/kennisbank/cybersecurity-kmo-mkb/">cybersecurity voor kmo's en mkb</a>.</p>
+<h2>Waar begin je?</h2>
+<ol>
+<li>Ga na of je eronder valt, en als wat: essentieel of belangrijk.</li>
+<li>Registreer je, als dat nog niet gebeurd is.</li>
+<li>Maak een risicoanalyse en een plan met de maatregelen die ontbreken.</li>
+<li>Leg de meldprocedure vast: wie meldt wat, bij wie, binnen welke termijn.</li>
+<li>Laat het bestuur goedkeuren en zorg voor opleiding.</li>
+<li>Kies hoe je het aantoont: in België <a href="/be/nis2-cyfun/">CyFun</a> of <a href="/kennisbank/iso-27001/">ISO 27001</a>, in Nederland met je eigen documentatie of ISO 27001.</li>
+</ol>
+""",
+    faq=[
+        ("Wat is NIS2 in het kort?", "Een Europese richtlijn die organisaties in belangrijke sectoren verplicht om hun cyberbeveiliging op orde te hebben, ernstige incidenten te melden en hun bestuur verantwoordelijk te maken."),
+        ("Sinds wanneer geldt NIS2?", "In België sinds 18 oktober 2024 via de NIS2-wet. In Nederland sinds 15 augustus 2026 via de Cyberbeveiligingswet."),
+        ("Voor wie geldt NIS2?", "Voor organisaties in aangewezen sectoren, in de regel vanaf 50 medewerkers of meer dan 10 miljoen euro omzet en balanstotaal. Enkele digitale diensten vallen eronder ongeacht hun grootte."),
+        ("Wat is het verschil tussen essentiële en belangrijke entiteiten?", "Essentiële entiteiten zijn grote organisaties in de meest kritieke sectoren en krijgen vooraf en regelmatig toezicht. Belangrijke entiteiten worden vooral achteraf gecontroleerd, bijvoorbeeld na een incident."),
+        ("Is ISO 27001 verplicht onder NIS2?", "Nee. In België is ISO 27001 wel een erkende manier om je maatregelen aan te tonen, naast CyFun. In Nederland kun je ISO 27001 gebruiken als bewijs van je zorgplicht."),
+        ("Wat als ik niet onder NIS2 val?", "Dan heb je geen wettelijke plichten, maar je klanten die er wel onder vallen, zullen vaak vragen hoe je je beveiliging regelt. De basismaatregelen zijn voor elke organisatie verstandig."),
+    ],
+    sources=[("Richtlijn (EU) 2022/2555 (NIS2) op EUR-Lex", "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"),
+             ("Centrum voor Cybersecurity België (CCB)", "https://ccb.belgium.be"),
+             ("Nationaal Cyber Security Centrum (NCSC)", "https://www.ncsc.nl")],
+),
+dict(
+    path="/kennisbank/iso-27001/", lang="nl", kind="artikel", land="eu", crumbs=[("Kennisbank", "/kennisbank/")],
+    tags=["iso", "maatregelen", "nis2", "certificering"], updated="2026-10-11",
+    title="ISO 27001: wat is het, kosten en certificering | Cyberdijk",
+    desc="ISO 27001 uitgelegd voor kmo's en mkb: wat de norm vraagt, het stappenplan naar certificering, de kosten, de doorlooptijd en de link met NIS2.",
+    h1="ISO 27001: wat is het, wat kost het en hoe word je gecertificeerd?",
+    lede="ISO/IEC 27001 is de internationale norm voor informatiebeveiliging. Steeds meer klanten, aanbestedingen en wetten vragen erom. Deze gids legt uit wat de norm inhoudt, hoe je naar een certificaat gaat en wat dat kost.",
+    kort=[
+        "De norm vraagt een managementsysteem voor informatiebeveiliging (ISMS), gebaseerd op risico's, en kent 93 beheersmaatregelen.",
+        "Reken voor een kmo op 15.000 tot 50.000 euro in totaal en zes tot twaalf maanden.",
+        "Het certificaat geldt drie jaar, met elk jaar een controle-audit.",
+    ],
+    body="""
+<h2>Wat is ISO 27001?</h2>
+<p>ISO/IEC 27001 beschrijft hoe een organisatie haar informatiebeveiliging beheerst: door risico's systematisch in kaart te brengen, passende maatregelen te nemen en die voortdurend te verbeteren. Het hart is het <strong>ISMS</strong>, het managementsysteem voor informatiebeveiliging. De huidige versie is ISO/IEC 27001:2022. Een onafhankelijke certificatie-instelling controleert of je aan de norm voldoet en reikt dan het certificaat uit.</p>
+<h2>Uit welke delen bestaat de norm?</h2>
+<p>De hoofdstukken 4 tot 10 bevatten de eisen aan het managementsysteem: context en scope, leiderschap, risicobeoordeling, ondersteuning, uitvoering, evaluatie en verbetering. Bijlage A bevat 93 beheersmaatregelen in vier groepen: organisatorisch, mensgericht, fysiek en technologisch. Je kiest welke maatregelen voor jou gelden en legt dat vast in een verklaring van toepasselijkheid. <a href="/kennisbank/iso-27001-maatregelen/">De 93 maatregelen uitgelegd.</a></p>
+<h2>Het stappenplan naar certificering</h2>
+<ol>
+<li><strong>Scope bepalen:</strong> welke activiteiten, locaties en systemen vallen onder het certificaat.</li>
+<li><strong>Risicobeoordeling:</strong> welke informatie is belangrijk, wat kan er misgaan, hoe groot is het risico.</li>
+<li><strong>Maatregelen kiezen</strong> en de verklaring van toepasselijkheid opstellen.</li>
+<li><strong>Invoeren:</strong> beleid, procedures, technische maatregelen en bewustwording van medewerkers.</li>
+<li><strong>Interne audit en directiebeoordeling:</strong> werkt het systeem zoals bedoeld?</li>
+<li><strong>Certificatie-audit</strong> in twee fasen: eerst de documentatie, dan de werking in de praktijk.</li>
+<li><strong>Onderhouden:</strong> elk jaar een controle-audit, na drie jaar een hercertificering.</li>
+</ol>
+<h2>Wat kost ISO 27001?</h2>
+<p>Voor een kmo of mkb-bedrijf ligt het totaal doorgaans tussen 15.000 en 50.000 euro, afhankelijk van de grootte, de scope en het vertrekpunt. Daarin zitten externe begeleiding, de eigen tijd van medewerkers, eventuele technische aanpassingen en de audits zelf. Daarna volgen jaarlijkse kosten voor de controle-audits en het onderhoud van het systeem. In België kan advies rond cybersecurity in aanmerking komen voor de kmo-portefeuille.</p>
+<h2>Hoe lang duurt het?</h2>
+<p>De meeste kmo's rekenen op zes tot twaalf maanden. Het systeem moet enkele maanden aantoonbaar werken voordat de certificatie-audit kan slagen: de auditor wil bewijs zien van risicobeoordelingen, interne audits en verbeteracties.</p>
+<h2>ISO 27001 en NIS2</h2>
+<p>ISO 27001 is niet wettelijk verplicht, maar sluit goed aan bij <a href="/kennisbank/nis2/">NIS2</a>. In België is het een erkend alternatief voor <a href="/be/nis2-cyfun/">CyFun</a> om je maatregelen aan te tonen. In Nederland kun je het gebruiken als bewijs voor de zorgplicht van de Cyberbeveiligingswet. Voor de praktische uitwerking per land: <a href="/be/iso-27001/">ISO 27001 in België</a> en <a href="/nl/iso-27001/">ISO 27001 in Nederland</a>.</p>
+<h2>Voor wie is ISO 27001 de moeite waard?</h2>
+<ul>
+<li>Organisaties die onder NIS2 vallen en een internationaal erkend bewijs willen.</li>
+<li>IT- en softwarebedrijven, en dienstverleners die gevoelige gegevens van klanten beheren.</li>
+<li>Bedrijven die meedoen aan aanbestedingen of werken voor grote klanten die erom vragen.</li>
+<li>Organisaties die in meerdere landen werken: ISO 27001 wordt overal herkend.</li>
+</ul>
+""",
+    faq=[
+        ("Is ISO 27001 verplicht?", "Nee, het is een vrijwillige norm. Klanten, aanbestedingen of NIS2 kunnen er wel om vragen als bewijs dat je beveiliging op orde is."),
+        ("Wat kost een ISO 27001-certificering?", "Voor een kmo doorgaans 15.000 tot 50.000 euro in totaal, inclusief begeleiding, eigen tijd en audits. Daarna volgen jaarlijkse kosten voor de controle-audits."),
+        ("Hoe lang duurt ISO 27001?", "Meestal zes tot twaalf maanden. Het systeem moet enkele maanden werken voordat de certificatie-audit kan slagen."),
+        ("Hoe lang is een ISO 27001-certificaat geldig?", "Drie jaar, met elk jaar een controle-audit. Daarna volgt een hercertificering."),
+        ("Wat is het verschil tussen ISO 27001 en ISO 27002?", "ISO 27001 bevat de eisen waarop je gecertificeerd wordt. ISO 27002 is een richtlijn die de maatregelen uit bijlage A uitgebreider toelicht. Je kunt alleen voor ISO 27001 gecertificeerd worden."),
+        ("Kan een klein bedrijf ISO 27001 halen?", "Ja. De norm schaalt mee met de grootte. Een kleine organisatie met een duidelijke scope kan het halen, vaak met begeleiding voor de risicoanalyse en de documentatie."),
+    ],
+    sources=[("ISO: de norm ISO/IEC 27001", "https://www.iso.org/standard/27001"),
+             ("Centrum voor Cybersecurity België (CCB)", "https://ccb.belgium.be"),
+             ("Nationaal Cyber Security Centrum (NCSC)", "https://www.ncsc.nl")],
+),
+dict(
+    path="/kennisbank/nen-7510/", lang="nl-NL", kind="artikel", land="nl", crumbs=[("Kennisbank", "/kennisbank/")],
+    tags=["nen7510", "zorg", "iso", "nis2", "certificering"], updated="2026-10-11",
+    title="NEN 7510 uitgelegd: zorg, plicht en certificaat | Cyberdijk",
+    desc="NEN 7510 voor zorgaanbieders: wat de norm vraagt, voor wie verplicht, de versie 2024, certificering, kosten en een checklist om te starten.",
+    h1="NEN 7510: informatiebeveiliging in de zorg, van verplichting tot certificaat",
+    lede="NEN 7510 is de Nederlandse norm voor informatiebeveiliging in de zorg. Ze bouwt op ISO 27001 en 27002, met extra eisen voor patiëntgegevens. Voor zorgaanbieders is werken volgens NEN 7510 geen keuze maar een wettelijke verplichting. Dit is wat de norm vraagt en hoe je begint.",
+    kort=[
+        "Verplicht voor zorgaanbieders via de Wabvpz en het Besluit elektronische gegevensverwerking door zorgaanbieders; toezicht door IGJ en de Autoriteit Persoonsgegevens.",
+        "Nieuwe versie NEN 7510-1:2024 sinds december 2024; gecertificeerde organisaties stappen over vóór 20 februari 2027.",
+        "Werken volgens de norm is verplicht, een certificaat niet. Veel zorgverzekeraars, ketenpartners en aanbestedingen vragen er wel om.",
+    ],
+    body="""
+<h2>Wat is NEN 7510?</h2>
+<p>NEN 7510 beschrijft hoe een zorgorganisatie haar informatiebeveiliging organiseert: een managementsysteem (ISMS) op basis van risico's, met beheersmaatregelen die zijn toegesneden op de zorg. De norm bestaat uit twee delen. <strong>NEN 7510-1</strong> bevat de eisen aan het managementsysteem en de maatregelen, <strong>NEN 7510-2</strong> geeft de toelichting en praktische richtlijnen. Daarnaast horen <strong>NEN 7512</strong> (veilige uitwisseling van gegevens) en <strong>NEN 7513</strong> (logging van toegang tot patiëntdossiers) bij dezelfde familie.</p>
+<h2>Voor wie is NEN 7510 verplicht?</h2>
+<p>De Wet aanvullende bepalingen verwerking persoonsgegevens in de zorg (Wabvpz) en het bijbehorende Besluit elektronische gegevensverwerking door zorgaanbieders verwijzen naar NEN 7510, 7512 en 7513. Daardoor moet elke zorgaanbieder die patiëntgegevens elektronisch verwerkt, volgens deze normen werken: ziekenhuizen, ggz-instellingen, huisartsen, apotheken, fysiotherapeuten, tandartsen, verpleeghuizen en ook kleine praktijken. De Inspectie Gezondheidszorg en Jeugd (IGJ) en de Autoriteit Persoonsgegevens houden toezicht. Ook leveranciers van zorgsoftware en hostingpartijen krijgen de norm via hun klanten opgelegd.</p>
+<h2>De nieuwe versie: NEN 7510-1:2024</h2>
+<p>In december 2024 verscheen NEN 7510-1:2024, de opvolger van de versie uit 2017. De norm is afgestemd op ISO/IEC 27001:2022 en 27002:2022: dezelfde structuur en dezelfde 93 maatregelen, waarvan er 14 zijn aangepast voor de zorg, plus 8 extra zorgspecifieke maatregelen. Er is aandacht voor nieuwe wetgeving zoals de Wegiz en NIS2 (in Nederland de Cyberbeveiligingswet). Gecertificeerde organisaties krijgen twee jaar om over te stappen: tot 20 februari 2027.</p>
+<h2>Wat vraagt de norm concreet?</h2>
+<ul>
+<li>Een <strong>risicoanalyse</strong> van de informatie die je verwerkt en de systemen die je gebruikt.</li>
+<li><strong>Beleid en verantwoordelijkheden</strong>: wie is verantwoordelijk voor informatiebeveiliging, en wat verwacht je van medewerkers.</li>
+<li><strong>Toegangsbeheer</strong>: alleen wie het nodig heeft, ziet patiëntgegevens; met logging volgens NEN 7513.</li>
+<li><strong>Veilige uitwisseling</strong> met andere zorgverleners, volgens NEN 7512.</li>
+<li><strong>Leveranciersbeheer</strong>: afspraken met softwareleveranciers, hosting en verwerkers.</li>
+<li><strong>Incidentbeheer</strong>: melden, afhandelen en leren van beveiligingsincidenten en datalekken.</li>
+<li><strong>Continuïteit</strong>: back-ups, herstel en doorwerken bij uitval.</li>
+<li><strong>Bewustwording</strong>: training van medewerkers, want de meeste incidenten beginnen bij een klik.</li>
+</ul>
+<h2>Moet ik me laten certificeren?</h2>
+<p>De wet verplicht het werken volgens de norm, niet het certificaat. Een certificaat van een geaccrediteerde instelling bewijst wel dat je het aantoonbaar op orde hebt. Grote zorginstellingen en ICT-leveranciers in de zorg laten zich vrijwel allemaal certificeren; zorgverzekeraars, ketenpartners en aanbestedingen vragen er steeds vaker om. Een kleine praktijk kan ook kiezen voor een zelfverklaring of een toetsing door een externe adviseur.</p>
+<h2>Wat kost NEN 7510?</h2>
+<p>Voor een kleine praktijk gaat het vooral om tijd: beleid vastleggen, afspraken met leveranciers controleren en medewerkers trainen. Reken met begeleiding op enkele duizenden euro's. Voor een instelling die zich laat certificeren, ligt het totaal doorgaans tussen 15.000 en 60.000 euro, afhankelijk van de omvang en het vertrekpunt, plus jaarlijkse controle-audits. Heb je al ISO 27001, dan is de stap naar NEN 7510 klein: de structuur is dezelfde.</p>
+<h2>Checklist: zo begin je</h2>
+<ol>
+<li>Ga na welke norm op je van toepassing is: NEN 7510 voor elke zorgaanbieder, NEN 7512 en 7513 zodra je gegevens uitwisselt of dossiers bijhoudt.</li>
+<li>Maak een inventaris van systemen, gegevens en leveranciers.</li>
+<li>Voer een risicoanalyse uit en leg de maatregelen vast die je neemt.</li>
+<li>Controleer verwerkersovereenkomsten en de certificaten van je leveranciers.</li>
+<li>Zet logging en toegangsbeheer op orde.</li>
+<li>Train medewerkers en leg een procedure vast voor incidenten en datalekken.</li>
+<li>Plan een interne audit, en beslis daarna of je certificering wilt.</li>
+</ol>
+<p>Meer over de basis vind je in onze gids over <a href="/kennisbank/iso-27001/">ISO 27001</a>. Valt je organisatie ook onder de Cyberbeveiligingswet, lees dan <a href="/nl/cyberbeveiligingswet-nis2/">wat die voor de zorg betekent</a>.</p>
+""",
+    faq=[
+        ("Is NEN 7510 verplicht?", "Ja. Via de Wabvpz en het Besluit elektronische gegevensverwerking door zorgaanbieders moet elke zorgaanbieder die patiëntgegevens elektronisch verwerkt volgens NEN 7510, 7512 en 7513 werken. Een certificaat is niet verplicht, werken volgens de norm wel."),
+        ("Wat is het verschil tussen NEN 7510 en ISO 27001?", "NEN 7510 is de Nederlandse zorgversie van ISO 27001 en 27002: dezelfde structuur en maatregelen, aangevuld met eisen voor patiëntgegevens. Wie ISO 27001 heeft, kan NEN 7510 er relatief eenvoudig bij halen."),
+        ("Wat is er nieuw in NEN 7510:2024?", "De norm is afgestemd op ISO 27001:2022 en 27002:2022, met 14 aangepaste en 8 extra maatregelen voor de zorg, en aandacht voor de Wegiz en NIS2. Overstappen moet vóór 20 februari 2027."),
+        ("Geldt NEN 7510 ook voor een kleine praktijk?", "Ja. Ook een huisarts, tandarts of fysiotherapeut moet volgens de norm werken. De maatregelen schalen mee met de grootte; certificering is voor kleine praktijken meestal niet nodig."),
+        ("Wie controleert NEN 7510?", "De Inspectie Gezondheidszorg en Jeugd (IGJ) houdt toezicht op zorgaanbieders; de Autoriteit Persoonsgegevens op de verwerking van persoonsgegevens."),
+    ],
+    sources=[("NEN: NEN 7510 informatiebeveiliging in de zorg", "https://www.nen.nl/zorg-welzijn/informatiebeveiliging-in-de-zorg"),
+             ("Kiwa: NEN 7510 voor informatiebeveiliging zorg vernieuwd", "https://www.kiwa.com/nl/nl/over-kiwa/nieuws/nen-7510-voor-informatiebeveiliging-zorg-vernieuwd/"),
+             ("Inspectie Gezondheidszorg en Jeugd", "https://www.igj.nl")],
+),
+dict(
+    path="/kennisbank/iso-27002/", lang="nl", kind="artikel", land="eu", crumbs=[("Kennisbank", "/kennisbank/")],
+    tags=["iso", "maatregelen"], updated="2026-10-11",
+    title="ISO 27002: maatregelen en verschil met 27001 | Cyberdijk",
+    desc="ISO 27002 uitgelegd: wat de norm is, de 93 maatregelen in vier thema's, het verschil met ISO 27001 en waarom je er niet voor gecertificeerd kunt worden.",
+    h1="ISO 27002: wat is het en wat is het verschil met ISO 27001?",
+    lede="ISO/IEC 27002 is de handleiding bij ISO 27001. Waar 27001 zegt wát je moet regelen, legt 27002 per maatregel uit hóe je dat doet. Je kunt er niet voor gecertificeerd worden, maar zonder 27002 bouw je geen goed ISMS.",
+    kort=[
+        "ISO 27001 bevat de eisen en is certificeerbaar; ISO 27002 is de toelichting bij de maatregelen en is dat niet.",
+        "De versie 2022 telt 93 maatregelen in vier thema's: organisatorisch, mensgericht, fysiek en technologisch.",
+        "Elke maatregel heeft attributen (zoals preventief of detectief) waarmee je ze kunt sorteren en koppelen aan risico's.",
+    ],
+    body="""
+<h2>ISO 27001 en 27002 naast elkaar</h2>
+<div style="overflow-x:auto"><table style="min-width:520px">
+<thead><tr><th></th><th>ISO/IEC 27001</th><th>ISO/IEC 27002</th></tr></thead>
+<tbody>
+<tr><td>Wat</td><td>Eisen aan een managementsysteem voor informatiebeveiliging (ISMS)</td><td>Richtlijnen bij de beheersmaatregelen</td></tr>
+<tr><td>Certificeerbaar</td><td>Ja</td><td>Nee</td></tr>
+<tr><td>Maatregelen</td><td>Bijlage A: lijst van 93 maatregelen, één regel per maatregel</td><td>Dezelfde 93 maatregelen, elk met doel, uitleg en implementatietips</td></tr>
+<tr><td>Gebruik</td><td>Wat je moet aantonen bij de audit</td><td>Hoe je de maatregelen in de praktijk invult</td></tr>
+</tbody></table></div>
+<h2>De vier thema's van ISO 27002:2022</h2>
+<ul>
+<li><strong>Organisatorisch (37 maatregelen):</strong> beleid, rollen, leveranciersbeheer, incidentbeheer, continuïteit, naleving van wetgeving.</li>
+<li><strong>Mensgericht (8):</strong> screening, arbeidsvoorwaarden, bewustwording en training, disciplinaire procedure, thuiswerken.</li>
+<li><strong>Fysiek (14):</strong> toegang tot gebouwen en ruimtes, apparatuur, bekabeling, veilig afvoeren van media.</li>
+<li><strong>Technologisch (34):</strong> toegangsbeheer, versleuteling, logging, back-ups, netwerkbeveiliging, veilige ontwikkeling, beheer van kwetsbaarheden.</li>
+</ul>
+<p>Nieuw in de versie 2022 zijn onder meer dreigingsinformatie, beveiliging van clouddiensten, gereedheid voor continuïteit, fysieke monitoring, configuratiebeheer, wissen van informatie, maskeren van gegevens, voorkomen van gegevenslekken, monitoring van activiteiten, webfiltering en veilig programmeren.</p>
+<h2>Attributen: maatregelen slim sorteren</h2>
+<p>Elke maatregel in 27002:2022 heeft vijf attributen: het type (preventief, detectief, correctief), de eigenschap van informatie (vertrouwelijkheid, integriteit, beschikbaarheid), het cyberbeveiligingsconcept (identificeren, beschermen, detecteren, reageren, herstellen), het operationele domein en het beveiligingsdomein. Daarmee kun je bijvoorbeeld snel alle detectieve maatregelen voor beschikbaarheid selecteren, of de koppeling met het NIST-raamwerk of CyFun maken.</p>
+<h2>Hoe gebruik je ISO 27002 in de praktijk?</h2>
+<ol>
+<li>Voer eerst een risicoanalyse uit volgens ISO 27001.</li>
+<li>Kies per risico de maatregelen uit bijlage A die het risico verkleinen.</li>
+<li>Lees in ISO 27002 hoe je elke gekozen maatregel invult en wat de auditor verwacht.</li>
+<li>Leg in de verklaring van toepasselijkheid vast welke maatregelen je toepast en waarom je andere weglaat.</li>
+</ol>
+<p>De volledige lijst van de 93 maatregelen vind je in <a href="/kennisbank/iso-27001-maatregelen/">ISO 27001: de 93 maatregelen uitgelegd</a>. Het hele traject naar certificering staat in <a href="/kennisbank/iso-27001/">de gids over ISO 27001</a>.</p>
+""",
+    faq=[
+        ("Kan ik een ISO 27002-certificaat halen?", "Nee. ISO 27002 is een richtlijn, geen eisennorm. Je certificeert je voor ISO 27001; daarin verwijst bijlage A naar de maatregelen die 27002 toelicht."),
+        ("Hoeveel maatregelen telt ISO 27002:2022?", "93, verdeeld over vier thema's: 37 organisatorische, 8 mensgerichte, 14 fysieke en 34 technologische maatregelen. De vorige versie had er 114 in 14 hoofdstukken."),
+        ("Moet ik alle 93 maatregelen toepassen?", "Nee. Je kiest op basis van je risicoanalyse welke maatregelen van toepassing zijn, en je onderbouwt in de verklaring van toepasselijkheid waarom je andere weglaat."),
+        ("Is ISO 27002 nuttig zonder certificering?", "Ja. Het is een praktische handleiding voor elke organisatie die haar beveiliging gestructureerd wil opzetten, ook zonder audit."),
+    ],
+    sources=[("ISO: de norm ISO/IEC 27002", "https://www.iso.org/standard/75652.html"), ("ISO: de norm ISO/IEC 27001", "https://www.iso.org/standard/27001")],
+),
+dict(
+    path="/kennisbank/iso-27000-familie/", lang="nl", kind="artikel", land="eu", crumbs=[("Kennisbank", "/kennisbank/")],
+    tags=["iso", "privacy", "cloud"], updated="2026-10-11",
+    title="ISO 27000-familie: welke norm heb je nodig? | Cyberdijk",
+    desc="De ISO 27000-reeks uitgelegd: 27001, 27002, 27005, 27017, 27018, 27701 en 27799. Wat elke norm doet, welke certificeerbaar is en welke jij nodig hebt.",
+    h1="De ISO 27000-familie: welke norm heb je wanneer nodig?",
+    lede="ISO 27001 is de bekendste, maar de reeks 27000 telt tientallen normen voor informatiebeveiliging, privacy en cloud. De meeste zijn richtlijnen. Dit overzicht zegt wat elke norm doet en wanneer je ze nodig hebt.",
+    kort=[
+        "Alleen ISO 27001 en ISO 27701 zijn certificeerbaar; de andere normen zijn richtlijnen die je daarbij helpen.",
+        "ISO 27017 en 27018 zijn voor cloudaanbieders, ISO 27799 en NEN 7510 voor de zorg.",
+        "Begin altijd met 27001 en 27002; de rest komt erbij als je sector of klanten erom vragen.",
+    ],
+    body="""
+<h2>Overzicht van de belangrijkste normen</h2>
+<div style="overflow-x:auto"><table style="min-width:560px">
+<thead><tr><th>Norm</th><th>Wat</th><th>Certificeerbaar</th><th>Voor wie</th></tr></thead>
+<tbody>
+<tr><td><strong>ISO 27000</strong></td><td>Overzicht en begrippen van de hele reeks</td><td>Nee</td><td>Iedereen die start</td></tr>
+<tr><td><strong>ISO 27001</strong></td><td>Eisen aan een managementsysteem voor informatiebeveiliging (ISMS)</td><td>Ja</td><td>Elke organisatie</td></tr>
+<tr><td><strong>ISO 27002</strong></td><td>Toelichting bij de 93 beheersmaatregelen</td><td>Nee</td><td>Wie 27001 invoert</td></tr>
+<tr><td><strong>ISO 27005</strong></td><td>Richtlijnen voor risicobeheer</td><td>Nee</td><td>Wie de risicoanalyse opzet</td></tr>
+<tr><td><strong>ISO 27017</strong></td><td>Extra maatregelen voor clouddiensten</td><td>Als aanvulling op 27001</td><td>Cloudaanbieders en grote cloudgebruikers</td></tr>
+<tr><td><strong>ISO 27018</strong></td><td>Bescherming van persoonsgegevens in de publieke cloud</td><td>Als aanvulling op 27001</td><td>Cloudaanbieders die persoonsgegevens verwerken</td></tr>
+<tr><td><strong>ISO 27701</strong></td><td>Managementsysteem voor privacy (PIMS)</td><td>Ja, sinds de versie 2025 ook zelfstandig</td><td>Wie de AVG aantoonbaar wil naleven</td></tr>
+<tr><td><strong>ISO 27799</strong></td><td>Informatiebeveiliging in de zorg (internationaal)</td><td>Nee</td><td>Zorgorganisaties; in Nederland geldt NEN 7510</td></tr>
+<tr><td><strong>ISO 27035</strong></td><td>Beheer van beveiligingsincidenten</td><td>Nee</td><td>Wie een incidentproces opzet</td></tr>
+<tr><td><strong>ISO 27036</strong></td><td>Beveiliging in leveranciersrelaties</td><td>Nee</td><td>Wie leveranciers moet beoordelen, bijvoorbeeld onder NIS2</td></tr>
+</tbody></table></div>
+<h2>Welke norm heb jij nodig?</h2>
+<ul>
+<li><strong>Je wilt aantonen dat je beveiliging op orde is:</strong> <a href="/kennisbank/iso-27001/">ISO 27001</a>, met <a href="/kennisbank/iso-27002/">27002</a> als handleiding.</li>
+<li><strong>Je levert clouddiensten:</strong> 27001 plus 27017, en 27018 als je persoonsgegevens verwerkt.</li>
+<li><strong>Je wilt de AVG aantoonbaar naleven:</strong> <a href="/kennisbank/iso-27701/">ISO 27701</a>.</li>
+<li><strong>Je werkt in de zorg in Nederland:</strong> <a href="/kennisbank/nen-7510/">NEN 7510</a>, de Nederlandse uitwerking van 27001 en 27799.</li>
+<li><strong>Je valt onder NIS2:</strong> 27001 als bewijs van je maatregelen, 27036 voor je leveranciers. In België is <a href="/be/nis2-cyfun/">CyFun</a> het alternatief.</li>
+</ul>
+<h2>Veelgemaakte fouten</h2>
+<p>Organisaties zeggen soms "ISO 27002-gecertificeerd" te zijn; dat bestaat niet. Ook "ISO 27000" op een website is meestal een losse verwijzing naar de reeks. Vraag bij een leverancier altijd naar het certificaat zelf: welke norm, welke scope, welke certificerende instelling en tot wanneer geldig.</p>
+""",
+    faq=[
+        ("Wat is het verschil tussen ISO 27000 en ISO 27001?", "ISO 27000 is het overzicht met begrippen van de hele reeks. ISO 27001 bevat de eisen aan een managementsysteem en is de norm waarvoor je gecertificeerd wordt."),
+        ("Welke ISO 27000-normen zijn certificeerbaar?", "ISO 27001 en ISO 27701. ISO 27017 en 27018 kun je laten toetsen als aanvulling op een 27001-certificaat. De andere normen zijn richtlijnen."),
+        ("Heb ik ISO 27017 of 27018 nodig?", "Alleen als je zelf clouddiensten levert of op grote schaal persoonsgegevens in de cloud verwerkt voor klanten. Voor de meeste kmo's volstaat 27001."),
+        ("Welke norm geldt voor de zorg?", "Internationaal ISO 27799, in Nederland NEN 7510, die wettelijk verplicht is voor zorgaanbieders."),
+    ],
+    sources=[("ISO: de norm ISO/IEC 27001", "https://www.iso.org/standard/27001"), ("ISO: ISO/IEC 27000-familie", "https://www.iso.org/standard/iso-iec-27000-family")],
+),
+dict(
+    path="/kennisbank/iso-27701/", lang="nl", kind="artikel", land="eu", crumbs=[("Kennisbank", "/kennisbank/")],
+    tags=["iso", "privacy", "avg", "gdpr"], updated="2026-10-11",
+    title="ISO 27701: privacy aantoonbaar op orde (PIMS) | Cyberdijk",
+    desc="ISO 27701 uitgelegd: de norm voor een privacymanagementsysteem, wat er nieuw is in 2025, de link met de AVG en wanneer certificering loont.",
+    h1="ISO 27701: de norm om je privacybeleid aantoonbaar te maken",
+    lede="De AVG vraagt dat je kunt aantonen dat je persoonsgegevens goed beschermt. ISO/IEC 27701 geeft daar een structuur voor: een managementsysteem voor privacy, kortweg PIMS. Sinds de versie 2025 kun je er ook zonder ISO 27001 voor gecertificeerd worden.",
+    kort=[
+        "ISO 27701 beschrijft een Privacy Information Management System (PIMS) met aparte eisen voor verwerkingsverantwoordelijken en verwerkers.",
+        "De versie 2025 is een zelfstandige norm; een ISO 27001-certificaat is niet langer een voorwaarde.",
+        "Het certificaat is geen officiële AVG-certificering, maar wel een sterk bewijs van verantwoordingsplicht.",
+    ],
+    body="""
+<h2>Wat is ISO 27701?</h2>
+<p>ISO/IEC 27701 beschrijft hoe een organisatie de bescherming van persoonsgegevens structureel beheert: beleid, rollen, risicoanalyse op privacy, maatregelen, en continue verbetering. De norm maakt onderscheid tussen de verplichtingen van een <strong>verwerkingsverantwoordelijke</strong> (wie bepaalt waarom en hoe gegevens verwerkt worden) en een <strong>verwerker</strong> (wie dat in opdracht doet). Dat sluit rechtstreeks aan op de rolverdeling in de AVG.</p>
+<h2>Wat is er nieuw in de versie 2025?</h2>
+<p>De eerste versie uit 2019 was een uitbreiding op ISO 27001: zonder 27001-certificaat geen 27701. De versie 2025 is een zelfstandige managementsysteemnorm met dezelfde structuur als de andere ISO-normen. Een organisatie kan zich nu rechtstreeks voor 27701 laten certificeren, al blijft de combinatie met 27001 logisch voor wie beide wil aantonen. Er ligt meer nadruk op governance, verantwoording en transparantie, en op moderne technologie en internationale doorgifte. Voor bestaande certificaten geldt een overgangsperiode.</p>
+<h2>Wat vraagt de norm?</h2>
+<ul>
+<li>Een <strong>register</strong> van verwerkingen en een duidelijke grondslag per verwerking.</li>
+<li><strong>Privacyrisicoanalyses</strong>, en waar nodig een DPIA.</li>
+<li>Procedures voor <strong>rechten van betrokkenen</strong>: inzage, correctie, verwijdering, bezwaar.</li>
+<li><strong>Afspraken met verwerkers</strong> en controle op hun naleving.</li>
+<li>Maatregelen voor <strong>dataminimalisatie</strong>, bewaartermijnen en versleuteling.</li>
+<li>Een proces voor <strong>datalekken</strong>, inclusief de melding binnen 72 uur.</li>
+<li>Regels voor <strong>doorgifte</strong> buiten de EU.</li>
+</ul>
+<h2>Is ISO 27701 een AVG-certificaat?</h2>
+<p>Nee. De AVG voorziet in eigen certificeringsmechanismen die door toezichthouders moeten worden goedgekeurd, en ISO 27701 is daar geen van. Het certificaat toont wel aan dat je privacybeheer systematisch is opgezet en extern getoetst. In de praktijk weegt dat zwaar bij klanten, aanbestedingen en toezichthouders, zeker voor verwerkers zoals softwarebedrijven, hostingpartijen en dienstverleners met veel klantgegevens.</p>
+<h2>Voor wie is het de moeite waard?</h2>
+<ul>
+<li>Verwerkers die voor veel klanten persoonsgegevens verwerken: SaaS, hosting, marketingbureaus, callcenters, salarisverwerkers.</li>
+<li>Organisaties met gevoelige gegevens: zorg, hr-dienstverleners, financiële dienstverleners.</li>
+<li>Bedrijven die al ISO 27001 hebben en hun privacybeheer op hetzelfde niveau willen brengen.</li>
+</ul>
+<p>Wie nog geen managementsysteem heeft, begint beter met de <a href="/kennisbank/avg-checklist-kmo/">AVG-checklist voor kmo's en mkb</a> en het <a href="/kennisbank/verwerkingsregister/">verwerkingsregister</a>. Het overzicht van alle normen staat in <a href="/kennisbank/iso-27000-familie/">de ISO 27000-familie</a>.</p>
+""",
+    faq=[
+        ("Heb ik ISO 27001 nodig voor ISO 27701?", "Niet meer. Sinds de versie 2025 is ISO 27701 een zelfstandige norm. De combinatie blijft wel gebruikelijk, omdat privacy en informatiebeveiliging sterk overlappen."),
+        ("Is ISO 27701 verplicht onder de AVG?", "Nee. De AVG verplicht geen enkele norm. ISO 27701 is een vrijwillige manier om je verantwoordingsplicht aantoonbaar in te vullen."),
+        ("Wat kost ISO 27701?", "Vergelijkbaar met ISO 27001: voor een kmo doorgaans 10.000 tot 40.000 euro voor begeleiding, eigen tijd en audit, lager als je al een 27001-systeem hebt."),
+        ("Wat is een PIMS?", "Een Privacy Information Management System: het geheel van beleid, processen en maatregelen waarmee je de bescherming van persoonsgegevens beheert en verbetert."),
+    ],
+    sources=[("ISO: de norm ISO/IEC 27701", "https://www.iso.org/standard/27701"),
+             ("Kiwa: ISO/IEC 27701:2025 gepubliceerd", "https://www.kiwa.com/nl/nl/over-kiwa/nieuws/isoiec-277012025-gepubliceerd-vernieuwde-privacy-standaard-biedt-organisaties-meer-houvast/"),
+             ("AVG (Verordening (EU) 2016/679) op EUR-Lex", "https://eur-lex.europa.eu/eli/reg/2016/679/oj")],
+),
+dict(
+    path="/kennisbank/iso-27001-kosten/", lang="nl", kind="artikel", land="eu", crumbs=[("Kennisbank", "/kennisbank/")],
+    tags=["iso", "kosten", "certificering"], updated="2026-10-11",
+    title="ISO 27001 kosten: wat betaal je echt? | Cyberdijk",
+    desc="Wat kost ISO 27001 voor een kmo of mkb-bedrijf? Begeleiding, eigen uren, tools, audit en jaarlijkse kosten, met rekenvoorbeelden en bespaartips.",
+    h1="ISO 27001 kosten: wat betaal je echt voor certificering?",
+    lede="De prijs van ISO 27001 bestaat uit vier delen: begeleiding, eigen tijd, technische aanpassingen en de audit. Voor een kmo komt dat samen meestal uit tussen 15.000 en 50.000 euro, en daarna enkele duizenden euro's per jaar. Hier zie je waar het geld naartoe gaat en hoe je bespaart.",
+    kort=[
+        "Certificatie-audit: 5.000 tot 15.000 euro voor de eerste cyclus, afhankelijk van grootte en scope.",
+        "Begeleiding: 5.000 tot 25.000 euro; eigen uren vaak het grootste, onzichtbare deel.",
+        "Jaarlijks daarna: 2.000 tot 6.000 euro voor controle-audits plus het onderhoud van het systeem.",
+    ],
+    body="""
+<h2>De vier kostenposten</h2>
+<div style="overflow-x:auto"><table style="min-width:560px">
+<thead><tr><th>Kostenpost</th><th>Klein bedrijf (10-25 mensen)</th><th>Middelgroot (50-150 mensen)</th></tr></thead>
+<tbody>
+<tr><td>Externe begeleiding</td><td>€5.000 – €12.000</td><td>€12.000 – €25.000</td></tr>
+<tr><td>Eigen uren (schatting)</td><td>150 – 300 uur</td><td>400 – 800 uur</td></tr>
+<tr><td>Tools en technische aanpassingen</td><td>€1.000 – €5.000</td><td>€5.000 – €15.000</td></tr>
+<tr><td>Certificatie-audit (fase 1 + 2)</td><td>€5.000 – €8.000</td><td>€8.000 – €15.000</td></tr>
+<tr><td><strong>Totaal eerste jaar</strong></td><td><strong>€15.000 – €25.000</strong></td><td><strong>€30.000 – €50.000+</strong></td></tr>
+<tr><td>Jaarlijkse controle-audit</td><td>€2.000 – €3.500</td><td>€3.500 – €6.000</td></tr>
+</tbody></table></div>
+<p>Bedragen excl. btw, gebaseerd op gangbare tarieven in België en Nederland in 2026. De audit wordt berekend op het aantal medewerkers binnen de scope en het aantal locaties; certificerende instellingen rekenen een vast aantal auditdagen per grootteklasse.</p>
+<h2>Waar het geld naartoe gaat</h2>
+<ul>
+<li><strong>Begeleiding:</strong> een consultant die de risicoanalyse, het beleid en de documentatie mee opzet. Hoe meer je zelf doet, hoe lager deze post.</li>
+<li><strong>Eigen tijd:</strong> de grootste verborgen kost. Iemand moet het systeem trekken, en elke afdeling levert input. Reken dat uur in.</li>
+<li><strong>Tools:</strong> een wachtwoordmanager, MFA, logging, back-upoplossing, eventueel software voor het ISMS zelf. Veel kmo's hebben het meeste al.</li>
+<li><strong>Audit:</strong> fase 1 toetst de documentatie, fase 2 de werking. Vraag offertes bij minstens drie geaccrediteerde instellingen; de verschillen zijn groot.</li>
+</ul>
+<h2>Zo houd je de kosten laag</h2>
+<ol>
+<li><strong>Kies een smalle scope.</strong> Begin met de afdeling of dienst waar klanten om vragen, breid later uit.</li>
+<li><strong>Doe de basis zelf.</strong> Inventaris, risicoanalyse en beleid kun je met een goed sjabloon grotendeels zelf. Laat een adviseur het nakijken in plaats van alles schrijven.</li>
+<li><strong>Gebruik wat je al hebt.</strong> Bestaande procedures, IT-beleid en leverancierscontracten tellen mee.</li>
+<li><strong>Vraag subsidie aan.</strong> In Vlaanderen komt advies rond cybersecurity in aanmerking voor de kmo-portefeuille. In Nederland bestaan regionale regelingen en de cyberweerbaarheidssubsidies via het Digital Trust Center en de regionale ontwikkelingsmaatschappijen.</li>
+<li><strong>Combineer normen.</strong> Wie ook NEN 7510 of ISO 27701 wil, laat ze in één audit meenemen.</li>
+</ol>
+<h2>Wat levert het op?</h2>
+<p>De kosten staan tegenover wat je zonder certificaat verliest: aanbestedingen waar het een eis is, klanten die een alternatief zoeken, en de schade van een incident dat je had kunnen voorkomen. Voor een IT- of softwarebedrijf is één behouden klant vaak genoeg om de investering terug te verdienen. Onder <a href="/kennisbank/nis2/">NIS2</a> is het certificaat bovendien een erkend bewijs van je maatregelen.</p>
+<p>Het hele traject staat in <a href="/kennisbank/iso-27001/">de gids over ISO 27001</a>; de stappen per land in <a href="/be/iso-27001/">ISO 27001 in België</a> en <a href="/nl/iso-27001/">ISO 27001 in Nederland</a>.</p>
+""",
+    faq=[
+        ("Wat kost een ISO 27001-audit?", "De certificatie-audit kost voor een klein bedrijf doorgaans 5.000 tot 8.000 euro, voor een middelgroot bedrijf 8.000 tot 15.000 euro. Daarna volgen jaarlijkse controle-audits van 2.000 tot 6.000 euro."),
+        ("Kan ik ISO 27001 halen zonder consultant?", "Ja, als iemand intern de tijd en de kennis heeft. De meeste kmo's laten de risicoanalyse en de documentatie wel nakijken; dat is goedkoper dan alles uitbesteden."),
+        ("Hoe lang blijft een certificaat geldig?", "Drie jaar, met elk jaar een controle-audit. Na drie jaar volgt een hercertificering, die iets goedkoper is dan de eerste audit."),
+        ("Zijn er subsidies voor ISO 27001?", "In Vlaanderen via de kmo-portefeuille voor advies rond cybersecurity. In Nederland via regionale regelingen; informeer bij het Digital Trust Center of je regionale ontwikkelingsmaatschappij."),
+    ],
+    sources=[("ISO: de norm ISO/IEC 27001", "https://www.iso.org/standard/27001"), ("VLAIO: kmo-portefeuille", "https://www.vlaio.be/nl/subsidies-financiering/kmo-portefeuille"), ("Digital Trust Center", "https://www.digitaltrustcenter.nl")],
+),
+dict(
+    path="/kennisbank/nis2-checklist/", lang="nl", kind="artikel", land="eu", crumbs=[("Kennisbank", "/kennisbank/")],
+    tags=["nis2", "checklist", "maatregelen", "registratie", "meldplicht"], updated="2026-10-11",
+    title="NIS2-checklist: 20 punten voor BE en NL | Cyberdijk",
+    desc="NIS2-checklist in 20 punten: toepasselijkheid, registratie, de tien maatregelen, meldplicht en bestuur. Voor België (CCB) en Nederland (Cbw).",
+    h1="NIS2-checklist: 20 punten om na te lopen",
+    lede="Val je onder NIS2, dan moet je een reeks zaken aantoonbaar geregeld hebben. Deze checklist loopt ze in volgorde af, met per punt wat de toezichthouder wil zien. Print hem, vink af, en je weet waar je staat.",
+    kort=[
+        "Vijf blokken: toepasselijkheid, registratie, maatregelen, meldplicht en bestuur.",
+        "In België toon je de maatregelen aan met CyFun of ISO 27001; in Nederland met je eigen documentatie of ISO 27001.",
+        "Elke stap moet aantoonbaar zijn: een beleid dat niemand kent, telt niet.",
+    ],
+    body="""
+<h2>1. Toepasselijkheid</h2>
+<ol>
+<li>Wij hebben vastgesteld of we in een NIS2-sector actief zijn. <a href="/kennisbank/valt-mijn-bedrijf-onder-nis2/">Zo check je dat.</a></li>
+<li>Wij weten of we een essentiële of een belangrijke entiteit zijn (grootte en sector).</li>
+<li>Wij weten welke wet geldt: de Belgische NIS2-wet (CCB) of de Nederlandse Cyberbeveiligingswet (NCSC).</li>
+</ol>
+<h2>2. Registratie</h2>
+<ol start="4">
+<li>Wij zijn geregistreerd: in België via Safeonweb@Work bij het CCB, in Nederland in het entiteitenregister van het NCSC.</li>
+<li>Onze contactgegevens voor incidenten zijn actueel en worden bewaakt, ook buiten de kantooruren.</li>
+</ol>
+<h2>3. De maatregelen (zorgplicht)</h2>
+<ol start="6">
+<li>Er is een actuele risicoanalyse en een beleid voor informatiebeveiliging, goedgekeurd door het bestuur.</li>
+<li>Er is een procedure voor incidentbeheer: detecteren, afhandelen, documenteren.</li>
+<li>Back-ups en continuïteit zijn geregeld en getest: we kunnen terug na een ransomware-aanval.</li>
+<li>Leveranciers en dienstverleners zijn beoordeeld; beveiligingseisen staan in de contracten.</li>
+<li>Beveiliging is onderdeel van aankoop, ontwikkeling en onderhoud van systemen, inclusief kwetsbaarhedenbeheer.</li>
+<li>We meten of de maatregelen werken: interne audits, tests, rapportage.</li>
+<li>Medewerkers krijgen training in cyberhygiëne; het bestuur volgt een opleiding.</li>
+<li>Versleuteling is geregeld waar nodig: gegevens in opslag en onderweg.</li>
+<li>Toegangsbeheer en personeelsbeveiliging zijn op orde: wie heeft toegang tot wat, en wat gebeurt er bij vertrek.</li>
+<li>Multifactorauthenticatie staat aan voor e-mail, beheer en toegang op afstand; communicatie is beveiligd.</li>
+</ol>
+<p>De volledige uitleg per maatregel staat in <a href="/kennisbank/nis2-maatregelen/">NIS2: de tien maatregelen</a>. In België kies je een <a href="/kennisbank/cyfun-niveaus/">CyFun-niveau</a> of ISO 27001 om dit aan te tonen.</p>
+<h2>4. Meldplicht</h2>
+<ol start="16">
+<li>We weten wat een significant incident is en wie beslist of we melden.</li>
+<li>De drie termijnen staan in de procedure: waarschuwing binnen 24 uur, melding binnen 72 uur, eindverslag binnen een maand. <a href="/kennisbank/nis2-meldplicht-incident/">Zo werkt het.</a></li>
+<li>Een datalek met persoonsgegevens melden we daarnaast apart aan de GBA of de AP.</li>
+</ol>
+<h2>5. Bestuur en bewijs</h2>
+<ol start="19">
+<li>Het bestuur heeft de maatregelen goedgekeurd, volgt ze op en kent zijn <a href="/kennisbank/nis2-bestuur-aansprakelijkheid/">aansprakelijkheid</a>.</li>
+<li>Alles is gedocumenteerd en terug te vinden: beleid, risicoanalyse, registraties, audits, trainingen, meldingen. Essentiële entiteiten in België plannen hun conformiteitsbeoordeling vóór 18 april 2027.</li>
+</ol>
+<h2>Niet onder NIS2, wel een vragenlijst gekregen?</h2>
+<p>Dan gebruik je dezelfde checklist, zonder de registratie en de meldplicht. Je klant wil vooral de punten 6 tot 15 zien. <a href="/kennisbank/nis2-vragenlijst-leverancier/">Zo beantwoord je een NIS2-vragenlijst als leverancier.</a> Het volledige overzicht staat in <a href="/kennisbank/nis2/">de NIS2-gids voor België en Nederland</a>.</p>
+""",
+    faq=[
+        ("Is er een officiële NIS2-checklist?", "Nee. De richtlijn noemt tien categorieën maatregelen; België werkt ze uit in CyFun, Nederland in de Cyberbeveiligingswet en de toelichting van het NCSC. Deze checklist volgt die structuur."),
+        ("Waar begin ik als ik nog niets heb?", "Bij punt 1 tot 5: weet of je eronder valt en registreer je. Daarna de risicoanalyse en de maatregelen met de grootste winst: multifactorauthenticatie, back-ups en updates."),
+        ("Moet ik alles tegelijk klaar hebben?", "In Nederland gelden de plichten sinds 15 augustus 2026. In België geldt de wet sinds oktober 2024, met 18 april 2027 als deadline voor de beoordeling van essentiële entiteiten. Toezichthouders kijken naar aantoonbare voortgang."),
+        ("Telt ISO 27001 als bewijs voor NIS2?", "In België is het een erkend alternatief voor CyFun. In Nederland kun je het gebruiken om je zorgplicht aan te tonen."),
+    ],
+    sources=[("Richtlijn (EU) 2022/2555 (NIS2) op EUR-Lex", "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"), ("Centrum voor Cybersecurity België (CCB)", "https://ccb.belgium.be"), ("Nationaal Cyber Security Centrum (NCSC)", "https://www.ncsc.nl")],
+),
 ]
 
 
@@ -274,6 +700,16 @@ def toepassen(pages, bronnen_kmo):
         for k in ("title", "desc", "updated"):
             if u.get(k):
                 p[k] = u[k]
+    for p in pages:
+        if p["path"].startswith("/kennisbank/") and p["path"] not in ("/kennisbank/nis2/", "/kennisbank/iso-27001/"):
+            tags = p.get("tags") or []
+            extra = []
+            if "nis2" in tags:
+                extra.append('<a href="/kennisbank/nis2/">de complete NIS2-gids voor België en Nederland</a>')
+            if "iso" in tags:
+                extra.append('<a href="/kennisbank/iso-27001/">de complete gids over ISO 27001</a>')
+            if extra:
+                p["body"] = p["body"] + "<p><strong>Overzicht nodig?</strong> Lees " + " en ".join(extra) + ".</p>"
     for n in NIEUW:
         if not any(p["path"] == n["path"] for p in pages):
             n = dict(n)

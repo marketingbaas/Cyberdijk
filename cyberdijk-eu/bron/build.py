@@ -637,6 +637,9 @@ DIENSTEN = [
     ("GDPR/AVG op orde", "Verwerkingsregister, privacyverklaring, verwerkersovereenkomsten, DPIA en een procedure voor datalekken. Op termijn ook DPO of FG als externe dienst.", ["avg", "gdpr"]),
     ("Opleiding voor het bestuur", "De opleiding die NIS2 van bestuurders vraagt: wat de wet verwacht, welke risico's er zijn en hoe je als bestuur toezicht houdt. Met attest van deelname.", ["nis2", "bestuur"]),
     ("AI Act en AI-governance", "Inventaris van je AI-gebruik, AI-geletterdheid voor je medewerkers, transparantie en de voorbereiding op de hoogrisico-regels. Na de AIGP-certificering, verwacht eind 2027.", ["ai"]),
+    ("NEN 7510 voor de zorg", "Voor Nederlandse zorgaanbieders en hun leveranciers: de stap van ISO 27001 naar NEN 7510-1:2024, de zorgspecifieke maatregelen, NEN 7512 en 7513, en voorbereiding op certificering vóór 20 februari 2027.", ["nen7510", "zorg", "iso"]),
+    ("Externe DPO of privacy officer", "Een functionaris voor gegevensbescherming op afroep of per maand: register bijhouden, DPIA's begeleiden, datalekken beoordelen en het aanspreekpunt voor de toezichthouder. Na de CIPP/E- en CIPM-certificering.", ["avg", "gdpr", "dpo"]),
+    ("NIS2-vragenlijst van je klant beantwoorden", "Een grote klant stuurt een beveiligingsvragenlijst of eist een CyFun-niveau? Samen invullen, de gaten benoemen en een actieplan met bewijs opstellen. Kort traject, vaste prijs.", ["nis2", "leverancier"]),
 ]
 WACHTLIJST_FORM = ('<form name="wachtlijst" method="post" action="/api/contact">'
                    '<input type="hidden" name="form-name" value="wachtlijst">'
@@ -644,7 +647,7 @@ WACHTLIJST_FORM = ('<form name="wachtlijst" method="post" action="/api/contact">
                    '<label for="w-naam">Naam</label><input id="w-naam" name="naam" autocomplete="name" required>'
                    '<label for="w-email">E-mailadres</label><input id="w-email" name="email" type="email" autocomplete="email" required>'
                    '<label for="w-bedrijf">Bedrijf</label><input id="w-bedrijf" name="bedrijf" autocomplete="organization">'
-                   '<label for="w-dienst">Waar heb je hulp bij nodig?</label><select id="w-dienst" name="dienst"><option>NIS2 en CyFun</option><option>ISO 27001</option><option>GDPR/AVG</option><option>Opleiding voor het bestuur</option><option>AI Act en AI-governance</option><option>Weet ik nog niet</option></select>'
+                   '<label for="w-dienst">Waar heb je hulp bij nodig?</label><select id="w-dienst" name="dienst"><option>NIS2 en CyFun</option><option>ISO 27001</option><option>GDPR/AVG</option><option>Opleiding voor het bestuur</option><option>AI Act en AI-governance</option><option>NEN 7510 voor de zorg</option><option>Externe DPO of privacy officer</option><option>NIS2-vragenlijst beantwoorden</option><option>Weet ik nog niet</option></select>'
                    '<p class="klein">We gebruiken je gegevens alleen om je te verwittigen wanneer de begeleiding start. Lees de <a href="/privacy/">privacyverklaring</a>.</p>'
                    '<button class="knop" type="submit">Zet mij op de lijst</button></form>')
 
