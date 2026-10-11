@@ -161,6 +161,105 @@ dict(
     ],
     sources=[],
 ),
+dict(
+    path="/kennisbank/toegankelijkheidswet-website/", lang="nl", kind="artikel", land="eu", crumbs=[("Kennisbank", "/kennisbank/")],
+    tags=["toegankelijkheid", "eaa", "webshop", "wcag"], updated="2026-10-11",
+    title="Toegankelijkheidswet (EAA) voor websites | Cyberdijk",
+    desc="De European Accessibility Act geldt sinds 28 juni 2025. Welke websites en webshops vallen eronder, wat eist de norm en wie controleert in BE en NL?",
+    h1="De Europese toegankelijkheidswet: wat betekent ze voor je website of webshop?",
+    lede="Sinds 28 juni 2025 moeten webshops en andere online diensten voor consumenten toegankelijk zijn voor mensen met een beperking. De regels komen uit de European Accessibility Act (EAA). Hier lees je wie eronder valt, wat de norm vraagt en hoe je begint.",
+    kort=[
+        "De EAA geldt onder meer voor e-commerce: sites en apps waar consumenten kopen, bestellen, reserveren of een contract sluiten.",
+        "Micro-ondernemingen (minder dan 10 werknemers en maximaal 2 miljoen euro omzet of balanstotaal) zijn voor diensten grotendeels vrijgesteld.",
+        "De norm is EN 301 549, die verwijst naar WCAG 2.1 niveau AA. Toezicht: FOD Economie in België, ACM in Nederland.",
+    ],
+    body="""
+<h2>Wat is de European Accessibility Act?</h2>
+<p>De EAA is een Europese richtlijn (2019/882) die een reeks producten en diensten toegankelijk moet maken voor mensen met een visuele, auditieve, motorische of cognitieve beperking. De lidstaten moesten de regels omzetten, en ze gelden sinds 28 juni 2025. Voor websites gaat het vooral om <strong>e-handelsdiensten</strong>: alles waarmee een consument online iets koopt, bestelt, reserveert of afsluit. Ook bankdiensten, e-books, ticketing en elektronische communicatie vallen eronder.</p>
+<h2>Wie valt eronder?</h2>
+<p>Bedrijven die zulke diensten aan consumenten aanbieden in de EU. Een uitzondering geldt voor <strong>micro-ondernemingen</strong> die diensten leveren: bedrijven met minder dan 10 werknemers en een jaaromzet of balanstotaal van maximaal 2 miljoen euro. Een louter informatieve bedrijfssite zonder verkoop of boeking valt doorgaans niet onder de EAA. Een webshop, een online boekingsmodule of een klantenportaal waar contracten worden afgesloten, wel.</p>
+<h2>België en Nederland</h2>
+<p>In <strong>België</strong> zijn de regels voor bank- en e-handelsdiensten opgenomen in het Wetboek van Economisch Recht. De FOD Economie houdt toezicht; de Economische Inspectie behandelt meldingen. Voor overheden gelden al langer aparte regels rond digitale toegankelijkheid. In <strong>Nederland</strong> houdt de ACM toezicht op webshops en communicatiediensten, en consumenten kunnen problemen melden via ACM ConsuWijzer. Uit onderzoek van de ACM bleek in 2026 dat een groot deel van de webshops nog niet in orde is.</p>
+<h2>Wat vraagt de norm?</h2>
+<p>De geharmoniseerde norm EN 301 549 verwijst voor websites naar <strong>WCAG 2.1 niveau AA</strong>. Concreet betekent dat onder meer:</p>
+<ul>
+<li>voldoende contrast tussen tekst en achtergrond;</li>
+<li>een tekstalternatief voor afbeeldingen die iets betekenen;</li>
+<li>een logische structuur met koppen, lijsten en labels;</li>
+<li>alles bedienbaar met het toetsenbord, met een zichtbare focus;</li>
+<li>formulieren met duidelijke labels en begrijpelijke foutmeldingen;</li>
+<li>werkt bij inzoomen tot 200% en op kleine schermen;</li>
+<li>geen tijdslimieten of bewegende inhoud die je niet kunt pauzeren.</li>
+</ul>
+<p>Daarnaast moet je informatie geven over hoe je dienst aan de toegankelijkheidseisen voldoet, bijvoorbeeld in een toegankelijkheidsverklaring of in je algemene voorwaarden.</p>
+<h2>Hoe begin je?</h2>
+<ol>
+<li>Bepaal of je onder de wet valt: verkoop of boeking aan consumenten, en groter dan een micro-onderneming.</li>
+<li>Laat je belangrijkste pagina's en je volledige bestel- of boekingsproces testen, automatisch én handmatig.</li>
+<li>Los eerst de blokkerende problemen op: alles wat iemand verhindert om een aankoop af te ronden.</li>
+<li>Leg vast wie verantwoordelijk is en neem toegankelijkheid op in elke nieuwe aanpassing van je site.</li>
+<li>Publiceer de informatie over toegankelijkheid en een manier om problemen te melden.</li>
+</ol>
+<p>Een check van je website en de aanpassingen kun je laten doen bij onze partner <a href="https://www.marketingbaas.com/website-toegankelijk-maken/">Marketingbaas</a>.</p>
+""",
+    faq=[
+        ("Geldt de toegankelijkheidswet voor elke website?", "Nee. Ze geldt vooral voor diensten waarmee consumenten online iets kopen, bestellen, reserveren of afsluiten, en voor bepaalde sectoren zoals bankdiensten. Micro-ondernemingen die diensten leveren, zijn grotendeels vrijgesteld."),
+        ("Sinds wanneer geldt de EAA?", "Sinds 28 juni 2025 in de hele EU."),
+        ("Welke norm moet mijn website halen?", "EN 301 549, die voor websites verwijst naar WCAG 2.1 niveau AA."),
+        ("Wie controleert de toegankelijkheidswet?", "In België de FOD Economie, in Nederland de ACM. Beide kunnen optreden na meldingen van consumenten."),
+        ("Is toegankelijkheid ook nuttig als ik niet verplicht ben?", "Ja. Een toegankelijke site is bruikbaar voor meer klanten, ook ouderen en mensen op een klein scherm, en de structuur die toegankelijkheid vraagt helpt ook je vindbaarheid in zoekmachines."),
+    ],
+    sources=[("Richtlijn (EU) 2019/882 (European Accessibility Act) op EUR-Lex", "https://eur-lex.europa.eu/eli/dir/2019/882/oj"),
+             ("Vlaanderen: EU-richtlijn 2019/882 voor B2C (EAA)", "https://www.vlaanderen.be/inter/overheden-en-professionelen/werken-aan-digitale-toegankelijkheid/eu-richtlijn-2019-882-voor-b2c-eaa"),
+             ("ACM: bereid je voor op regels toegankelijkheid websites en apps", "https://www.acm.nl/nl/publicaties/acm-roept-bedrijven-op-zich-voor-te-bereiden-op-regels-toegankelijkheid-websites-en-apps")],
+),
+dict(
+    path="/kennisbank/website-gehackt-datalek-melden/", lang="nl", kind="artikel", land="eu", crumbs=[("Kennisbank", "/kennisbank/")],
+    tags=["datalek", "avg", "hack", "website"], updated="2026-10-11",
+    title="Website gehackt: is het een datalek? | Cyberdijk",
+    desc="Je website is gehackt. Wanneer is dat een datalek dat je binnen 72 uur moet melden bij de GBA of de AP? Zo beoordeel je het, met stappenplan.",
+    h1="Website gehackt: moet je dat melden als datalek?",
+    lede="Niet elke hack is een datalek, maar veel hacks zijn het wel. Zodra persoonsgegevens mogelijk in verkeerde handen zijn gekomen, gelden de regels van de AVG: beoordelen, documenteren en bij risico binnen 72 uur melden.",
+    kort=[
+        "Een hack is een datalek als persoonsgegevens mogelijk bekeken, gekopieerd, gewijzigd of gewist zijn.",
+        "Bij risico voor de betrokkenen meld je binnen 72 uur aan de GBA (België) of de AP (Nederland).",
+        "Documenteer elk incident, ook als je niet hoeft te melden.",
+    ],
+    body="""
+<h2>Wanneer is een hack een datalek?</h2>
+<p>Een datalek is volgens de AVG een inbreuk op de beveiliging waardoor persoonsgegevens per ongeluk of onrechtmatig worden vernietigd, verloren, gewijzigd, openbaar gemaakt of ingezien. Bij een gehackte website is dat het geval als de aanvaller toegang had tot gegevens van mensen. Denk aan:</p>
+<ul>
+<li>berichten uit het <strong>contactformulier</strong> die in de database of mailbox bewaard worden;</li>
+<li><strong>klantaccounts</strong> en bestellingen in een webshop;</li>
+<li><strong>inschrijvingen</strong>, nieuwsbrieflijsten of afspraken;</li>
+<li>de <strong>gebruikersaccounts</strong> van medewerkers in het beheer van de site.</li>
+</ul>
+<p>Ging het om een hack die alleen spam toonde of bezoekers doorstuurde, en stonden er geen persoonsgegevens op de server, dan is het meestal geen datalek. Je kunt dat pas zeggen na onderzoek van hoe de aanvaller binnenkwam en wat hij kon zien.</p>
+<h2>Melden of niet?</h2>
+<p>Je meldt een datalek aan de toezichthouder als het waarschijnlijk een risico inhoudt voor de rechten en vrijheden van de betrokkenen. Dat doe je zonder onnodige vertraging en <a href="/kennisbank/datalek-melden-72-uur/">uiterlijk binnen 72 uur</a> nadat je ervan op de hoogte bent. In België is dat de Gegevensbeschermingsautoriteit (GBA), in Nederland de Autoriteit Persoonsgegevens (AP). Is het risico hoog, bijvoorbeeld bij wachtwoorden, betaalgegevens of gevoelige informatie, dan informeer je ook de betrokkenen zelf.</p>
+<h2>Stappenplan na een hack</h2>
+<ol>
+<li><strong>Beperk de schade:</strong> haal de site offline of zet een onderhoudspagina, en vervang alle wachtwoorden.</li>
+<li><strong>Zoek uit wat er gebeurde:</strong> hoe kwam de aanvaller binnen, sinds wanneer, en welke gegevens kon hij bereiken?</li>
+<li><strong>Beoordeel het risico</strong> voor de mensen van wie gegevens betrokken zijn.</li>
+<li><strong>Meld binnen 72 uur</strong> als er risico is. Ontbreekt nog informatie, meld dan wat je weet en vul later aan.</li>
+<li><strong>Documenteer</strong> het incident in je register, ook als je niet meldt.</li>
+<li><strong>Laat de site schoonmaken en het lek dichten</strong>, en neem maatregelen zodat het niet opnieuw gebeurt.</li>
+</ol>
+<p>Twijfel je of je site gehackt is? Doe de gratis <a href="https://www.marketingbaas.com/tools/website-gehackt-check/">hack-check van Marketingbaas</a>. Moet de site schoongemaakt worden, dan kan dat bij <a href="https://www.marketingbaas.com/website-gehackt-herstellen/">Marketingbaas voor een vaste prijs</a>.</p>
+<h2>Voorkomen</h2>
+<p>De meeste websitehacks komen binnen via verouderde plugins of zwakke wachtwoorden. Houd je site bij, beperk het aantal plugins, zet tweestapsverificatie aan voor het beheer en bewaar niet meer persoonsgegevens dan nodig: berichten uit een contactformulier hoeven niet jarenlang in de database te staan.</p>
+""",
+    faq=[
+        ("Is elke websitehack een datalek?", "Nee. Alleen als persoonsgegevens mogelijk bekeken, gekopieerd, gewijzigd of gewist zijn. Een hack die alleen spam toont, zonder toegang tot gegevens, is meestal geen datalek."),
+        ("Binnen hoeveel tijd moet ik een datalek melden?", "Zonder onnodige vertraging en uiterlijk binnen 72 uur nadat je ervan op de hoogte bent, als het lek een risico inhoudt voor de betrokkenen."),
+        ("Bij wie meld ik een datalek?", "In België bij de Gegevensbeschermingsautoriteit (GBA), in Nederland bij de Autoriteit Persoonsgegevens (AP)."),
+        ("Moet ik ook mijn klanten verwittigen?", "Als het lek waarschijnlijk een hoog risico inhoudt, bijvoorbeeld bij wachtwoorden, betaalgegevens of gevoelige gegevens, moet je ook de betrokkenen zelf informeren."),
+    ],
+    sources=[("AVG (Verordening (EU) 2016/679), artikels 33 en 34, op EUR-Lex", "https://eur-lex.europa.eu/eli/reg/2016/679/oj"),
+             ("Gegevensbeschermingsautoriteit (België)", "https://www.gegevensbeschermingsautoriteit.be"),
+             ("Autoriteit Persoonsgegevens (Nederland)", "https://www.autoriteitpersoonsgegevens.nl")],
+),
 ]
 
 
@@ -178,6 +277,6 @@ def toepassen(pages, bronnen_kmo):
     for n in NIEUW:
         if not any(p["path"] == n["path"] for p in pages):
             n = dict(n)
-            n["sources"] = bronnen_kmo
+            n["sources"] = n.get("sources") or bronnen_kmo
             pages.append(n)
     return pages
