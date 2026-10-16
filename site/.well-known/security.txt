@@ -1,0 +1,4 @@
+Contact: mailto:info@cyberdijk.eu
+Expires: 2027-10-01T00:00:00.000Z
+Preferred-Languages: nl, en
+Canonical: https://cyberdijk.eu/.well-known/security.txt

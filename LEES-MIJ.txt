@@ -1,0 +1,6 @@
+Cyberdijk update 15 okt 2026 (SEO-doorlichting)
+Uploaden via https://github.com/marketingbaas/Cyberdijk/upload/main: map bron/ en site/ (volledig vervangen).
+- Positionering: "België en Nederland" i.p.v. "tussen Antwerpen en Breda" (home, over, diensten, voettekst)
+- Kruislinks op 8 artikels (datalek, camerabewaking, inzageverzoek, toegankelijkheid, AI-labels) 
+- Article-schema: auteur verwijst naar /over/
+61 pagina's, titels <=60, meta <=155, geen dode links.

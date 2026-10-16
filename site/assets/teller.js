@@ -1,0 +1,1 @@
+window.initTeller=function(){var n=new Date();n.setHours(0,0,0,0);var l=document.querySelectorAll("[data-dag]");for(var i=0;i<l.length;i++){var el=l[i],d=new Date(el.getAttribute("data-dag")+"T00:00:00"),v=Math.round((d-n)/864e5),t=el.getAttribute(v>0?"data-voor":"data-na");if(t&&v!==0){el.textContent=t.replace("%d",Math.abs(v));}}};window.initTeller();
